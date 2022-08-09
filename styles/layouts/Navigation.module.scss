@@ -1,0 +1,22 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: var(--gutter);
+}
+
+.open {
+  background-color: red;
+  bottom: 0;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  max-width: 3rem;
+}

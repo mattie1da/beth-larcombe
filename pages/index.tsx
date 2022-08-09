@@ -1,8 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { Navigation, Container } from "../layouts/";
-import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import { TiledProject } from "../components/projects";
+import { Navigation, Container, Hero, Section } from "../layouts/";
+import styles from "../styles/pages/Home.module.css";
+import utilStyles from "../styles/utils.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -18,18 +21,37 @@ const Home: NextPage = () => {
 
       <Navigation />
 
-      <Container>
-        <main className={styles.main}>
-          <h1 className={styles.title}>Beth Larcombe</h1>
-
-          <h2>Graphic Design</h2>
-
-          <p className={styles.description}>
-            A multi-disciplined designer based in Southampton with over 6 years
-            experience on a variety of brand, print &amp; digital projects.
-          </p>
-        </main>
-      </Container>
+      <main className={styles.main}>
+        <Container>
+          <div className={utilStyles.grid}>
+            <Hero
+              title="Beth Larcombe"
+              subTitle="Graphic Designer"
+              body="A multi-disciplined designer based in Southampton with over 6 years
+              experience on a variety of brand, print &amp; digital projects."
+            />
+            <TiledProject
+              images={[
+                {
+                  src: "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
+                  alt: "Cute puppy",
+                },
+                {
+                  src: "https://www.oliverpetcare.com/wp-content/uploads/2020/12/pexels-helena-lopes-1790446.jpg",
+                  alt: "Another one omg",
+                },
+              ]}
+              button={{
+                text: "Check It Out",
+                href: "/todo!",
+              }}
+            />
+          </div>
+        </Container>
+        <Section background="gradient" title="Recent Work">
+          Carousel
+        </Section>
+      </main>
 
       <footer>
         <Container>

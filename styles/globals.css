@@ -1,9 +1,50 @@
+:root {
+  /* fonts */
+  --fontForum: "Forum", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --fontDelaGothic: "Dela Gothic", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+
+  /* colors */
+  --black: 0, 0%, 22%;
+  --white: 0, 0%, 100%;
+
+  --pink: 309, 79%, 82%;
+  --yellow: 54, 100%, 96%;
+  --teal: 183, 56%, 75%;
+}
+
+@font-face {
+  font-family: "Dela Gothic";
+  src: url("../fonts/DelaGothicOne-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Forum";
+  src: url("../fonts/Forum-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html,
 body {
+  background-color: hsl(var(--yellow));
+  color: hsl(var(--black));
+  font-family: var(--fontForum);
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fontDelaGothic);
 }
 
 a {
@@ -13,14 +54,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }

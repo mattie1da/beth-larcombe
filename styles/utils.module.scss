@@ -1,0 +1,18 @@
+.heading1 {
+  color: hsl(var(--lavender));
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.heading2 {
+  color: hsl(var(--teal));
+  letter-spacing: 0.35rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  row-gap: var(--gutter);
+}

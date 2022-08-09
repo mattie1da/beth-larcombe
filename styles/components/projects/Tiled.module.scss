@@ -1,0 +1,30 @@
+$yo: 3rem;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  position: relative;
+}
+
+.image {
+  position: relative;
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+  transform: translateX($yo);
+  margin-left: calc(var(--gutter) * -2.2);
+  z-index: 1;
+}
+
+.large {
+  height: 20rem;
+  margin-right: calc(var(--gutter) * -1);
+  margin-top: $yo;
+}
+
+.button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

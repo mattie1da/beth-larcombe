@@ -1,0 +1,17 @@
+.section {
+  padding-top: var(--gutter);
+  padding-bottom: var(--gutter);
+}
+
+.gradient {
+  background: linear-gradient(to bottom right, #97ddea, #8fdd97);
+  color: hsl(var(--white));
+
+  .title {
+    color: hsl(var(--white));
+  }
+}
+
+.padLeft {
+  padding-left: var(--gutter);
+}

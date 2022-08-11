@@ -1,7 +1,10 @@
 @import "../mixins";
 
 .hero {
-  padding-top: calc(var(--gutter) * 3.4);
+  align-items: flex-end;
+  display: flex;
+  padding-top: var(--roof);
+  min-height: 100vh;
 
   // @include desktop() {
   //   align-items: flex-end;

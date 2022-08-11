@@ -22,6 +22,7 @@ export const Form = () => {
         name="name"
         type="text"
         placeholder="Your name"
+        required
       />
 
       <label htmlFor="email" className={utilStyles.visuallyHidden}>
@@ -33,6 +34,7 @@ export const Form = () => {
         type="text"
         name="email"
         placeholder="Your email address"
+        required
       />
 
       <label htmlFor="message" className={utilStyles.visuallyHidden}>
@@ -44,6 +46,7 @@ export const Form = () => {
         name="message"
         rows={6}
         placeholder="Your message..."
+        required
       />
       <label style={{ display: "none" }}>
         Don’t fill this out if you’re human:

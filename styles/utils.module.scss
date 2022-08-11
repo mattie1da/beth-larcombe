@@ -1,3 +1,5 @@
+@import "mixins";
+
 .heading1 {
   color: hsl(var(--lavender));
   line-height: 1;
@@ -12,7 +14,49 @@
   text-transform: uppercase;
 }
 
+.heading3 {
+  color: hsl(var(--lavender));
+  font-size: clamp(2.188rem, 7.5vw, 5rem);
+  line-height: 1.2;
+}
+
+.margin0 {
+  margin: 0;
+}
+
 .grid {
   display: grid;
   row-gap: var(--gutter);
+
+  @include desktop() {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.visuallyHidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+
+  &:after {
+    background: linear-gradient(to right, hsl(var(--pink)), hsl(var(--teal)));
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+  }
 }

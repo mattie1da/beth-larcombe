@@ -1,7 +1,14 @@
+@import "../mixins";
+
 .section {
   padding-top: calc(var(--gutter) * 1.5);
   padding-bottom: calc(var(--gutter) * 1.5);
   scroll-margin-top: calc(var(--gutter) * 3); // offset anchor links
+
+  @include desktop() {
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+  }
 }
 
 .center {

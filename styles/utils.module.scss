@@ -18,6 +18,7 @@
   color: hsl(var(--lavender));
   font-size: clamp(2.188rem, 7.5vw, 5rem);
   line-height: 1.2;
+  max-width: 9ch;
 }
 
 .margin0 {
@@ -47,6 +48,7 @@
   background-color: transparent;
   border: none;
   color: inherit;
+  font-weight: inherit;
   font-family: inherit;
   font-size: inherit;
 

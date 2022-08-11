@@ -1,8 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Beth Larcombe's Portfolio
+
+Welcome! My name is Matthew Wyatt ([mattie.world](https://mattie.world)), I built this project for Beth using [Next.js](https://nextjs.org/).
 
 ## Getting Started
 
-First, run the development server:
+Once you have cloned this project locally, be sure you have installed the dependencies required to run this project.
+
+```bash
+npm install
+# or
+yarn
+```
+
+Now, you can spin up the application locally by entering the following command:
 
 ```bash
 npm run dev
@@ -12,13 +22,32 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing pages by modifying `pages/(page-name).tsx`. The page will auto-update as you edit the file, no need to refresh the site each time.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Adding new projects
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+I've tried to keep things easy to update from one or two (okay.. three) places.
 
-## Learn More
+### Data
+The site widely uses the data in `lib/projects/data.tsx`, it is here you need add to the existing array of objects. Each object is one project, I recommend copy and pasting an existing object (to the bottom of the list) and amending it as per the spec of your new project.
+
+### Creating a new project page
+
+Next.js cleverly spins up pages whenever something is added to `pages/`.
+Once the data has been added, duplicate an existing project from `pages/project/blah.tsx`, and rename it.
+Important note: the file name will become the slug in the URL, so choose a nice name!
+
+### Changing the project index
+
+In the new project page you've creeated, you will see an index variable near the top of the file. `const index = 1`.
+This index gets the relevant object from the data array you have amended before, so be sure to adjust the index accordingly.
+Once the index is set, it will also let the breadcrumbs ('previous' and 'next' buttons at the bottom of the project) work out which order the projects are in.
+
+## Deployed on Netlify
+
+This project is deployed and hosted on Netlify.
+
+## More about Next.js
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -27,8 +56,6 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Help
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I'm more than happy to help with any queries on the site. Please, get in touch with me directly: [hello@mattie.world](mailto:hello@mattie.world).

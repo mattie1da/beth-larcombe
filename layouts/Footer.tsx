@@ -1,4 +1,5 @@
 import classnames from "classnames";
+import { Form } from "../components";
 import { IconBee } from "../components/icons";
 import styles from "../styles/layouts/Footer.module.scss";
 import utilStyles from "../styles/utils.module.scss";
@@ -16,44 +17,7 @@ export const Footer = () => {
           you’re planning. Feel free to give me a shout and we can have a chat.
         </p>
 
-        <form className={styles.form}>
-          <label htmlFor="name" className={utilStyles.visuallyHidden}>
-            Your name
-          </label>
-          <input
-            className={styles.input}
-            id="name"
-            type="text"
-            placeholder="Your name"
-          />
-
-          <label htmlFor="email" className={utilStyles.visuallyHidden}>
-            Your email addreess
-          </label>
-          <input
-            className={styles.input}
-            id="email"
-            type="text"
-            placeholder="Your email address"
-          />
-
-          <label htmlFor="message" className={utilStyles.visuallyHidden}>
-            Your message
-          </label>
-          <textarea
-            className={styles.input}
-            id="message"
-            rows={6}
-            placeholder="Your message..."
-          />
-
-          <button
-            className={classnames(styles.submit, utilStyles.button)}
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
+        <Form />
 
         <div className={styles.signature}>
           <p className={utilStyles.margin0}>

@@ -1,0 +1,23 @@
+.form {
+  display: grid;
+  row-gap: 0.9rem;
+  margin-bottom: var(--gutter);
+}
+
+.input {
+  color: hsl(var(--yellow));
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.9rem 1rem;
+  background-color: transparent;
+  border: 2px solid hsl(var(--yellow));
+
+  &::placeholder {
+    color: hsl(var(--yellow));
+  }
+}
+
+.submit {
+  margin-top: 1rem;
+  justify-self: center;
+}

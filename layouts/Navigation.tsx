@@ -33,17 +33,23 @@ export const Navigation = () => {
           <ul className={styles.list}>
             <li>
               <Link href="/#projects">
-                <a className={styles.link}>Projects</a>
+                <a onClick={() => setMenuOpen(false)} className={styles.link}>
+                  Projects
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/#about">
-                <a className={styles.link}>About</a>
+                <a onClick={() => setMenuOpen(false)} className={styles.link}>
+                  About
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/#contact">
-                <a className={styles.link}>Contact</a>
+                <a onClick={() => setMenuOpen(false)} className={styles.link}>
+                  Contact
+                </a>
               </Link>
             </li>
           </ul>

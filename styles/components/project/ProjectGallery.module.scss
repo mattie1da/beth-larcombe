@@ -1,0 +1,32 @@
+$columnGap: 1rem;
+$offset: -2.5rem;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: $columnGap;
+  grid-row-gap: var(--gutter);
+  grid-template-rows: 90vw 75vw 75vw 110vw 110vw 110vw;
+  margin-bottom: var(--gutter);
+
+  & > :nth-child(1) {
+    grid-column: span 2;
+    max-width: 69vw;
+  }
+
+  & > :nth-child(2) {
+    transform: translateY($offset);
+    margin-top: $columnGap;
+    grid-column: 2;
+  }
+
+  & > :nth-child(4) {
+    transform: translateY($offset);
+  }
+
+  & > :nth-last-child(-n + 3) {
+    grid-column: span 2;
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}

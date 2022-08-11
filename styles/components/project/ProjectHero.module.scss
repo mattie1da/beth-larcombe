@@ -2,7 +2,7 @@
   color: hsl(var(--yellow));
   display: flex;
   margin: 0;
-  min-height: calc(100vh - var(--roof));
+  min-height: calc(90vh - var(--roof));
   padding: calc(var(--gutter) * 1.5) var(--gutter);
 }
 

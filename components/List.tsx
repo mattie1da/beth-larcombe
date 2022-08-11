@@ -1,7 +1,12 @@
-// TODO: How to type check the array passed to this list?
 import styles from "../styles/components/List.module.scss";
 
-export const List = ({ list }) => {
+interface ListInterface {
+  list: string[];
+}
+
+export const List = (props: ListInterface) => {
+  const { list } = props;
+
   return (
     <ul className={styles.wrapper}>
       {list.map((item: string) => (

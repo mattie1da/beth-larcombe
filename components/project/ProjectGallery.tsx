@@ -2,7 +2,13 @@ import Image from "next/image";
 import styles from "../../styles/components/project/ProjectGallery.module.scss";
 import { ImageInterface } from "../../types";
 
-export const ProjectGallery = ({ images }) => {
+interface ProjectGalleryInterface {
+  images: ImageInterface[];
+}
+
+export const ProjectGallery = (props: ProjectGalleryInterface) => {
+  const { images } = props;
+
   return (
     <div className={styles.grid}>
       {images.map((image: ImageInterface, index: number) => (

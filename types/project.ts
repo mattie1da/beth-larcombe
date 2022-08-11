@@ -4,16 +4,7 @@ import { ImageInterface, ButtonInterface } from "./";
 export interface ProjectInterface {
   hero: ProjectHeroInterface;
   intro: ProjectIntroInterface;
-  images: [
-    // fixed length of 7 images
-    ImageInterface,
-    ImageInterface,
-    ImageInterface,
-    ImageInterface,
-    ImageInterface,
-    ImageInterface,
-    ImageInterface
-  ];
+  images: ImageInterface[];
   navigation: {
     previous: ButtonInterface;
     next: ButtonInterface;

@@ -9,12 +9,13 @@ import { Navigation, Container, Hero, Section, Footer } from "../layouts/";
 import styles from "../styles/pages/Home.module.scss";
 import utilStyles from "../styles/utils.module.scss";
 import { Carousel } from "../components/carousel";
+import { data } from "../lib/projects/data";
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Beth Larcombe</title>
+        <title>Beth Larcombe - Graphic Designer</title>
         <meta
           name="description"
           content="A multi-disciplined designer based in Southampton with over 6 years experience on a variety of brand, print & digital projects."
@@ -56,45 +57,18 @@ const Home: NextPage = () => {
         <Section background="gradient" title="Recent Work" id="projects">
           <Carousel
             items={[
-              <StackedProject
-                key={0}
-                image={{
-                  src: "https://www.oliverpetcare.com/wp-content/uploads/2020/12/pexels-helena-lopes-1790446.jpg",
-                  alt: "cuuute puppy",
-                }}
-                category={"Brand & Digital"}
-                title={"Willo Remedies"}
-                button={{
-                  href: "/todo",
-                  text: "view project",
-                }}
-              />,
-              <StackedProject
-                key={1}
-                image={{
-                  src: "https://www.oliverpetcare.com/wp-content/uploads/2020/12/pexels-helena-lopes-1790446.jpg",
-                  alt: "cuuute puppy",
-                }}
-                category={"Brand & Digital"}
-                title={"Tinkr"}
-                button={{
-                  href: "/todo",
-                  text: "view project",
-                }}
-              />,
-              <StackedProject
-                key={2}
-                image={{
-                  src: "https://www.oliverpetcare.com/wp-content/uploads/2020/12/pexels-helena-lopes-1790446.jpg",
-                  alt: "cuuute puppy",
-                }}
-                category={"Brand & Digital"}
-                title={"The Blend Academy"}
-                button={{
-                  href: "/todo",
-                  text: "view project",
-                }}
-              />,
+              data.map((project, index) => (
+                <StackedProject
+                  key={index}
+                  image={project.images[0]}
+                  category={project.hero.category}
+                  title={project.hero.title}
+                  button={{
+                    href: `/projects/${project.meta.slug}`,
+                    text: "View project",
+                  }}
+                />
+              )),
             ]}
           />
         </Section>

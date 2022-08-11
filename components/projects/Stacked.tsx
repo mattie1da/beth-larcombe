@@ -21,12 +21,16 @@ export const StackedProject = ({
   return (
     <figure className={styles.wrapper}>
       <div className={styles.image}>
-        <Image
-          src={image.src}
-          alt={image.alt}
-          layout="fill"
-          objectFit="cover"
-        />
+        <Link href={button.href}>
+          <a className={styles.imageInner}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              layout="fill"
+              objectFit="cover"
+            />
+          </a>
+        </Link>
       </div>
       <figcaption className={styles.caption}>
         <div>

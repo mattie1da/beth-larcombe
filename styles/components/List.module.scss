@@ -1,0 +1,17 @@
+.wrapper {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.item {
+  &::before {
+    background-color: hsl(var(--teal));
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 0.5rem;
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+}

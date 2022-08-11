@@ -1,3 +1,5 @@
+@import "../../mixins";
+
 .wrapper {
   margin: 0;
   // max-width: 18.25rem;
@@ -7,6 +9,10 @@
 .image {
   height: 24rem;
   position: relative;
+
+  @include desktop() {
+    height: 40rem;
+  }
 }
 
 .imageInner {
@@ -15,12 +21,21 @@
 }
 
 .caption {
-  // align-items: center;
   background-color: hsl(var(--white));
   color: hsl(var(--black));
   padding: 1.2rem;
-  // display: flex;
-  // justify-content: space-between;
+
+  @include desktop() {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(8rem, -10rem);
+  }
+}
+
+.category,
+.title {
+  font-size: clamp(1rem, 1.7vw, 1.25rem);
 }
 
 .category {
@@ -29,7 +44,6 @@
 }
 
 .title {
-  font-size: 0.95rem;
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -38,4 +52,8 @@
 
 .button {
   display: none;
+
+  @include desktop() {
+    display: block;
+  }
 }

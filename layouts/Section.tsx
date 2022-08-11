@@ -5,37 +5,56 @@ import classnames from "classnames";
 import styles from "../styles/layouts/Section.module.scss";
 
 interface SectionInterface {
-  background: string;
+  background?: string;
+  center?: Boolean;
   children: ReactNode;
   contain?: Boolean;
-  title: string;
+  title?: string;
+  variant?: string;
+  id?: string;
 }
 
 export const Section = ({
   background,
+  center,
   children,
   contain,
   title,
+  variant,
+  id,
 }: SectionInterface) => {
   return (
     <section
+      id={id}
       className={classnames(styles.section, {
         [styles.gradient]: background === "gradient",
-        [styles.pink]: background === "pink",
+        [styles.lavender]: background === "lavender",
+        [styles.about]: variant === "about",
+        [styles.center]: center,
       })}
     >
       {contain ? (
         <Container>
-          <h2 className={classnames(styles.title, utilStyles.heading2)}>
-            {title}
-          </h2>
+          {title && (
+            <h2 className={classnames(styles.title, utilStyles.heading2)}>
+              {title}
+            </h2>
+          )}
           {children}
         </Container>
       ) : (
-        <div className={styles.padLeft}>
-          <h2 className={classnames(styles.title, utilStyles.heading2)}>
-            {title}
-          </h2>
+        <div>
+          {title && (
+            <h2
+              className={classnames(
+                styles.padLeft,
+                styles.title,
+                utilStyles.heading2
+              )}
+            >
+              {title}
+            </h2>
+          )}
           {children}
         </div>
       )}

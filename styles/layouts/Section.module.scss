@@ -1,17 +1,43 @@
 .section {
-  padding-top: var(--gutter);
-  padding-bottom: var(--gutter);
+  padding-top: calc(var(--gutter) * 1.5);
+  padding-bottom: calc(var(--gutter) * 1.5);
+  scroll-margin-top: calc(var(--gutter) * 3); // offset anchor links
+}
+
+.center {
+  text-align: center;
 }
 
 .gradient {
-  background: linear-gradient(to bottom right, #97ddea, #8fdd97);
-  color: hsl(var(--white));
+  background: linear-gradient(
+    to bottom right,
+    hsl(var(--teal)),
+    hsl(var(--green))
+  );
+  color: hsl(var(--yellow));
 
   .title {
-    color: hsl(var(--white));
+    color: hsl(var(--yellow));
   }
+}
+
+.lavender {
+  background: radial-gradient(
+    at center bottom,
+    #eda9e9,
+    hsl(var(--lavender)) 80%
+  );
+  color: hsl(var(--yellow));
+}
+
+.title {
+  margin-top: 0;
 }
 
 .padLeft {
   padding-left: var(--gutter);
+}
+
+.about {
+  padding-bottom: 12.125rem;
 }

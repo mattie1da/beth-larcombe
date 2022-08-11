@@ -28,7 +28,8 @@ You can start editing pages by modifying `pages/(page-name).tsx`. The page will 
 
 I've tried to keep things easy to update from one or two (okay.. three) places.
 
-### Data
+### Data
+
 The site widely uses the data in `lib/projects/data.tsx`, it is here you need add to the existing array of objects. Each object is one project, I recommend copy and pasting an existing object (to the bottom of the list) and amending it as per the spec of your new project.
 
 ### Creating a new project page

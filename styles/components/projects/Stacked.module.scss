@@ -1,0 +1,36 @@
+.wrapper {
+  margin: 0;
+  // max-width: 18.25rem;
+  // width: 75vw;
+}
+
+.image {
+  height: 24rem;
+  position: relative;
+}
+
+.caption {
+  // align-items: center;
+  background-color: hsl(var(--white));
+  color: hsl(var(--black));
+  padding: 1.2rem;
+  // display: flex;
+  // justify-content: space-between;
+}
+
+.category {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.button {
+  display: none;
+}

@@ -1,9 +1,15 @@
+@import "../../mixins";
+
 $yo: 3rem;
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2.2fr;
   position: relative;
+
+  @include desktop() {
+    grid-template-columns: 1fr 1.2fr;
+  }
 }
 
 .image {
@@ -15,12 +21,22 @@ $yo: 3rem;
   transform: translateX($yo);
   margin-left: calc(var(--gutter) * -2.2);
   z-index: 1;
+
+  @include desktop() {
+    margin-left: 0;
+  }
 }
 
 .large {
-  height: 20rem;
+  height: 22rem;
   margin-right: calc(var(--gutter) * -1);
   margin-top: $yo;
+
+  @include desktop() {
+    // height: 40vw;
+    // max-height: 40rem;
+    margin-right: 0;
+  }
 }
 
 .button {

@@ -2,16 +2,8 @@ import classnames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/components/projects/Tiled.module.scss";
-
-interface ButtonInterface {
-  text: string;
-  href: string;
-}
-
-interface ImageInterface {
-  src: string;
-  alt: string;
-}
+import utilStyles from "../../styles/utils.module.scss";
+import { ButtonInterface, ImageInterface } from "../../types";
 
 interface TiledProjectInterface {
   button: ButtonInterface;
@@ -38,7 +30,9 @@ export const TiledProject = ({ button, images }: TiledProjectInterface) => {
         />
       </div>
       <Link href={button.href}>
-        <a className={styles.button}>{button.text}</a>
+        <a className={classnames(styles.button, utilStyles.button)}>
+          {button.text}
+        </a>
       </Link>
     </div>
   );

@@ -1,0 +1,55 @@
+.wrapper {
+  overflow: hidden; // hide the bee's butt!!
+  position: relative;
+}
+
+.title {
+  color: hsl(var(--yellow));
+  max-width: 16rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.body {
+  max-width: 34ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form {
+  display: grid;
+  row-gap: 0.9rem;
+  margin-bottom: var(--gutter);
+}
+
+.input {
+  color: hsl(var(--yellow));
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.9rem 1rem;
+  background-color: transparent;
+  border: 2px solid hsl(var(--yellow));
+
+  &::placeholder {
+    color: hsl(var(--yellow));
+  }
+}
+
+.submit {
+  margin-top: 1rem;
+  justify-self: center;
+}
+
+.signature {
+  display: grid;
+  row-gap: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.bee {
+  position: absolute;
+  bottom: -6.2rem;
+  transform: translateX(-50%);
+  left: 50%;
+  max-width: 4rem;
+}

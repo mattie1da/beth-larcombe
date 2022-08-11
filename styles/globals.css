@@ -14,6 +14,9 @@
   --yellow: 54, 100%, 96%;
   --teal: 183, 56%, 75%;
 
+  --green: 126, 53%, 71%;
+  --pink: 309, 79%, 82%;
+
   /* spacing */
   --gutter: 2.5rem;
 }
@@ -41,6 +44,7 @@ body {
   font-family: var(--fontForum);
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -61,6 +65,15 @@ h2 {
   font-size: clamp(1.25rem, 3vw, 1.875rem);
 }
 
+h2 + h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+p {
+  max-width: 34.5ch;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -68,6 +81,7 @@ a {
 
 * {
   box-sizing: border-box;
+  position: relative;
 }
 
 img {

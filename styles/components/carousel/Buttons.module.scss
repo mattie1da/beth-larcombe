@@ -1,0 +1,15 @@
+.button {
+  appearance: none;
+  background: none;
+  border: none;
+  color: hsl(var(--yellow));
+  outline: none;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.prev {
+  transform: rotate(180deg) translateY(3px);
+}

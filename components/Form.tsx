@@ -19,6 +19,7 @@ export const Form = () => {
       <input
         className={styles.input}
         id="name"
+        name="name"
         type="text"
         placeholder="Your name"
       />
@@ -30,6 +31,7 @@ export const Form = () => {
         className={styles.input}
         id="email"
         type="text"
+        name="email"
         placeholder="Your email address"
       />
 
@@ -39,6 +41,7 @@ export const Form = () => {
       <textarea
         className={styles.input}
         id="message"
+        name="message"
         rows={6}
         placeholder="Your message..."
       />

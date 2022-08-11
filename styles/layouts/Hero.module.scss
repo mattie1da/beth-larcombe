@@ -1,3 +1,11 @@
+@import "../mixins";
+
 .body {
-  max-width: 34.5ch;
+  margin-bottom: 0;
+}
+
+@include desktop() {
+  .wrapper {
+    // padding-top: 35vh;
+  }
 }

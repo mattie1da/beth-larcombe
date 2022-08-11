@@ -1,0 +1,23 @@
+.hero {
+  color: hsl(var(--yellow));
+  display: flex;
+  margin: 0;
+  min-height: calc(100vh - var(--roof));
+  padding: calc(var(--gutter) * 1.5) var(--gutter);
+}
+
+.content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.title,
+.category {
+  color: inherit;
+}
+
+.category {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}

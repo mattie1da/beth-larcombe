@@ -32,7 +32,7 @@ export const Carousel = ({ items }: CarouselInterface) => {
 
   return (
     <div className={styles.wrapper}>
-      <div ref={viewportRef}>
+      <div className={styles.carousel} ref={viewportRef}>
         <div className={styles.grid}>{items.map((item) => item)}</div>
       </div>
       <div className={styles.buttons}>

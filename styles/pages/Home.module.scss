@@ -1,0 +1,18 @@
+@import "../mixins";
+
+.hero {
+  padding-top: calc(var(--gutter) * 3.4);
+
+  // @include desktop() {
+  //   align-items: flex-end;
+  //   display: flex;
+  //   min-height: 100vh;
+  //   padding-bottom: var(--gutter);
+  // }
+}
+
+@include desktop() {
+  // .heroGrid {
+  //   align-items: flex-end;
+  // }
+}

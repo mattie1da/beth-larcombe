@@ -12,7 +12,7 @@ export const Form = () => {
       netlify-honeypot="bot-field"
       action="/success"
     >
-      <input type="hidden" name="contact" value="contact" />
+      <input type="hidden" name="form-name" value="contact" />
       <label htmlFor="name" className={utilStyles.visuallyHidden}>
         Your name
       </label>

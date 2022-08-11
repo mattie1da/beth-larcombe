@@ -2,6 +2,10 @@ import { ReactNode } from "react";
 import { ImageInterface, ButtonInterface } from "./";
 
 export interface ProjectInterface {
+  meta: {
+    description: string;
+    slug: string;
+  };
   hero: ProjectHeroInterface;
   intro: ProjectIntroInterface;
   images: ImageInterface[];

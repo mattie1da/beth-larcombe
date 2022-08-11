@@ -1,6 +1,8 @@
-import { data } from "./data";
+import { ProjectInterface } from "../../types";
 
-export const navigationData = data.map((project) => {
+const data = require("./data.json");
+
+export const navigationData = data.map((project: ProjectInterface) => {
   return {
     text: project.hero.title,
     href: project.meta.slug,

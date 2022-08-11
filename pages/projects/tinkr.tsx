@@ -3,10 +3,10 @@ import Head from "next/head";
 import { Navigation, Footer } from "../../layouts";
 import styles from "../../styles/pages/Project.module.scss";
 import { Project } from "../../layouts";
-import { data } from "../../lib/projects/data";
 import { breadcrumbs } from "../../helpers/breadcrumbs";
 
 const Tinkr: NextPage = () => {
+  const data = require("../../lib/projects/data.json");
   const index = 1;
   const { meta, hero, intro, images } = data[index];
 
@@ -22,6 +22,7 @@ const Tinkr: NextPage = () => {
 
       <main className={styles.main}>
         <Project
+          meta={meta}
           hero={hero}
           intro={intro}
           images={images}

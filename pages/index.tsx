@@ -1,17 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import classnames from "classnames";
 import { TiledProject } from "../components/projects";
 import { StackedProject } from "../components/projects/Stacked";
 import { Navigation, Container, Hero, Section, Footer } from "../layouts/";
 import styles from "../styles/pages/Home.module.scss";
 import utilStyles from "../styles/utils.module.scss";
+import { ProjectInterface } from "../types";
 import { Carousel } from "../components/carousel";
-import { data } from "../lib/projects/data";
 
 const Home: NextPage = () => {
+  const data = require("../lib/projects/data.json");
+
   return (
     <>
       <Head>
@@ -57,7 +57,7 @@ const Home: NextPage = () => {
         <Section background="gradient" title="Recent Work" id="projects">
           <Carousel
             items={[
-              data.map((project, index) => (
+              data.map((project: ProjectInterface, index: number) => (
                 <StackedProject
                   key={index}
                   image={project.images[0]}

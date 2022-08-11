@@ -26,27 +26,38 @@ You can start editing pages by modifying `pages/(page-name).tsx`. The page will 
 
 ## Adding new projects
 
-I've tried to keep things easy to update from one or two (okay.. three) places.
+I've tried to keep things easy to update from two places.
+
+- The data (json)
+- The page itself (next.js page)
 
 ### Data
 
-The site widely uses the data in `lib/projects/data.tsx`, it is here you need add to the existing array of objects. Each object is one project, I recommend copy and pasting an existing object (to the bottom of the list) and amending it as per the spec of your new project.
+The site widely uses data from `lib/projects/data.json` for projects. It is here you need add to the existing array of objects.
+
+Each object is one project, I recommend copy and pasting an existing object (to the bottom of the list) and amending it as per the spec of your new project.
 
 ### Creating a new project page
 
 Next.js cleverly spins up pages whenever something is added to `pages/`.
+
 Once the data has been added, duplicate an existing project from `pages/project/blah.tsx`, and rename it.
+
 Important note: the file name will become the slug in the URL, so choose a nice name!
 
 ### Changing the project index
 
-In the new project page you've creeated, you will see an index variable near the top of the file. `const index = 1`.
+In the new project page you've created, you will see an index variable near the top of the file.
+
+`const index = 1`
+
 This index gets the relevant object from the data array you have amended before, so be sure to adjust the index accordingly.
+
 Once the index is set, it will also let the breadcrumbs ('previous' and 'next' buttons at the bottom of the project) work out which order the projects are in.
 
-## Deployed on Netlify
+## Deployed on Netlify (and Form/Emails)
 
-This project is deployed and hosted on Netlify.
+This project is deployed and hosted on Netlify. The form in the footer utilises [Netlify's Form/Email notification system](https://docs.netlify.com/forms/setup/).
 
 ## More about Next.js
 

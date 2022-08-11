@@ -4,11 +4,19 @@
   left: 0;
   right: 0;
   padding: var(--gutter);
+  z-index: 2;
 }
 
 .open {
-  background-color: red;
+  background: radial-gradient(at bottom right, #dbdbdb, transparent 50%),
+    linear-gradient(
+      to bottom,
+      hsl(var(--teal)),
+      hsl(var(--green)) 70%,
+      hsl(var(--lavender))
+    );
   bottom: 0;
+  color: hsl(var(--white));
 }
 
 .header {
@@ -20,3 +28,23 @@
 .icon {
   max-width: 3rem;
 }
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  margin-top: calc(var(--gutter) * 2);
+  font-size: 3.75rem;
+}
+
+.link {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+// .orb {
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+
+// }

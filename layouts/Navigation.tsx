@@ -14,33 +14,43 @@ export const Navigation = () => {
   };
 
   return (
-    <nav
-      className={classnames(styles.wrapper, {
-        [styles.open]: menuOpen,
-      })}
-    >
-      <div className={styles.header}>
-        <Link href="/">
-          <a className={styles.icon}>
-            <IconBee />
-          </a>
-        </Link>
-        <button onClick={toggleMenu}>{menuOpen ? "close" : "open"}</button>
-      </div>
+    <header>
+      <nav
+        className={classnames(styles.wrapper, {
+          [styles.open]: menuOpen,
+        })}
+      >
+        <div className={styles.header}>
+          <Link href="/">
+            <a className={styles.icon}>
+              <IconBee />
+            </a>
+          </Link>
+          <button onClick={toggleMenu}>{menuOpen ? "close" : "open"}</button>
+        </div>
 
-      {menuOpen && (
-        <ul className="">
-          <li>
-            <Link href="/#projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/#about">About</Link>
-          </li>
-          <li>
-            <Link href="/#contact">Contact</Link>
-          </li>
-        </ul>
-      )}
-    </nav>
+        {menuOpen && (
+          <ul className={styles.list}>
+            <li>
+              <Link href="/#projects">
+                <a className={styles.link}>Projects</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/#about">
+                <a className={styles.link}>About</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/#contact">
+                <a className={styles.link}>Contact</a>
+              </Link>
+            </li>
+          </ul>
+        )}
+
+        <aside className={styles.orb}></aside>
+      </nav>
+    </header>
   );
 };

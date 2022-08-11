@@ -9,6 +9,11 @@
   position: relative;
 }
 
+.imageInner {
+  display: block;
+  height: 100%;
+}
+
 .caption {
   // align-items: center;
   background-color: hsl(var(--white));

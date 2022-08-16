@@ -13,6 +13,7 @@ export const Carousel = ({ items }: CarouselInterface) => {
 
   const [viewportRef, embla] = useEmblaCarousel({
     align: "start",
+    speed: 30,
   });
 
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);

@@ -1,14 +1,14 @@
 import classnames from "classnames";
 import { Form } from "../components";
 import { IconBee } from "../components/icons";
-import styles from "../styles/layouts/Footer.module.scss";
 import utilStyles from "../styles/utils.module.scss";
+import styles from "../styles/layouts/Footer.module.scss";
 import { Section } from "./";
 
 export const Footer = () => {
   return (
     <footer className={styles.wrapper} id="contact">
-      <Section contain center background="lavender">
+      <Section variant="footer" contain center background="lavender">
         <h2 className={classnames(utilStyles.heading2, styles.title)}>
           Like what you see?
         </h2>

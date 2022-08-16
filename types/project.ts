@@ -1,12 +1,14 @@
 import { ReactNode } from "react";
-import { ImageInterface, ButtonInterface } from "./";
+import { ImageInterface, ButtonInterface, HeroInterface } from "./";
 
 export interface ProjectInterface {
+  id: number;
   meta: {
     description: string;
+    category: string;
     slug: string;
   };
-  hero: ProjectHeroInterface;
+  hero: HeroInterface;
   intro: ProjectIntroInterface;
   images: ImageInterface[];
   navigation: {
@@ -15,13 +17,7 @@ export interface ProjectInterface {
   };
 }
 
-export interface ProjectHeroInterface {
-  image: ImageInterface;
-  title: string;
-  category: string;
-}
-
 export interface ProjectIntroInterface {
-  description: ReactNode;
+  description: string;
   list: string[];
 }

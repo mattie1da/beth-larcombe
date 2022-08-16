@@ -1,22 +1,68 @@
+@import "../mixins";
+
+$desktopNavSpacing: 2.5rem;
+
 .wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  padding: var(--gutter);
   z-index: 2;
+
+  &.scrolling {
+    animation: navigation 0.5s ease-in-out forwards;
+    position: fixed;
+    background-color: rgba(255, 253, 234, 0.8);
+  }
+}
+
+@keyframes navigation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.inner {
+  transition: all 0.25s ease-in-out;
+  height: var(--roof);
+  grid-template-columns: 1fr 1fr;
+  max-width: var(--containerMaxWidth);
+  margin: 0 auto;
+
+  &.scrolling {
+    grid-template-rows: calc(var(--roof) / 1.75) 1fr;
+    height: calc(var(--roof) / 1.75);
+
+    .icon {
+      display: flex;
+      max-width: 2rem;
+    }
+  }
+
+  @include phone() {
+    // padding-top: var(--gutter);
+    // padding-bottom: var(--gutter);
+    justify-content: space-between;
+    display: grid;
+    grid-template-rows: var(--roof) 1fr;
+  }
+
+  @include desktop() {
+    align-items: center;
+    display: flex;
+  }
 }
 
 .open {
   background: radial-gradient(at bottom right, #dbdbdb, transparent 50%),
-    linear-gradient(
-      to bottom,
-      hsl(var(--teal)),
-      hsl(var(--green)) 70%,
-      hsl(var(--lavender))
-    );
+    linear-gradient(to bottom, var(--teal), var(--green), var(--lavender));
   bottom: 0;
-  color: hsl(var(--white));
+  height: 100%;
+  color: var(--white);
+  position: fixed;
 }
 
 .header {
@@ -27,24 +73,44 @@
 
 .icon {
   max-width: 3rem;
+  transition: max-width 0.25s ease-in-out;
 }
 
 .list {
+  @include phone() {
+    font-size: 3.75rem;
+    margin-top: calc(var(--gutter) * 2);
+    text-align: center;
+    grid-column: span 2;
+    padding-left: 0;
+  }
+
   list-style: none;
-  padding-left: 0;
-  text-align: center;
-  margin-top: calc(var(--gutter) * 2);
-  font-size: 3.75rem;
+
+  @include desktop() {
+    display: flex;
+    padding-left: $desktopNavSpacing;
+    gap: $desktopNavSpacing;
+    margin: 0;
+  }
 }
 
 .link {
+  @include phone() {
+    margin-bottom: 1rem;
+  }
+
   display: block;
-  margin-bottom: 1rem;
 }
 
-// .orb {
-//   position: absolute;
-//   bottom: 0;
-//   right: 0;
+.button {
+  background: none;
+  border: none;
+  appearance: none;
+  padding: 0;
+  justify-self: flex-end;
 
-// }
+  @include desktop() {
+    display: none;
+  }
+}

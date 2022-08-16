@@ -1,61 +1,102 @@
 import classnames from "classnames";
 import Link from "next/link";
-import { useState } from "react";
-import { IconBee } from "../components/icons";
+import { useEffect, useState } from "react";
+import { IconBee, IconClose, IconOpen } from "../components/icons";
+import utilStyles from "../styles/utils.module.scss";
 import styles from "../styles/layouts/Navigation.module.scss";
-
-// import a context to write open nav state to
+import { Container } from "./Container";
 
 export const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const checkWindowWidth = () => {
+    setIsMobile(window.innerWidth < 899 ? true : false);
+  };
+
+  const checkScrollPosition = () => {
+    setScrollPosition(window.scrollY);
+  };
+
+  useEffect(() => {
+    checkWindowWidth();
+    checkScrollPosition();
+
+    window.addEventListener("resize", checkWindowWidth, true);
+    window.addEventListener("scroll", checkScrollPosition, true);
+
+    return () => {
+      window.removeEventListener("resize", checkWindowWidth, true);
+      window.removeEventListener("scroll", checkScrollPosition, true);
+    };
+  }, [typeof window !== "undefined"]);
+
   return (
     <header>
       <nav
         className={classnames(styles.wrapper, {
-          [styles.open]: menuOpen,
+          [styles.open]: menuOpen && isMobile,
+          [styles.scrolling]: scrollPosition > 100,
         })}
       >
-        <div className={styles.header}>
-          <Link href="/">
-            <a className={styles.icon}>
-              <IconBee />
-            </a>
-          </Link>
-          <button onClick={toggleMenu}>{menuOpen ? "close" : "open"}</button>
-        </div>
-
-        {menuOpen && (
-          <ul className={styles.list}>
-            <li>
-              <Link href="/#projects">
-                <a onClick={() => setMenuOpen(false)} className={styles.link}>
-                  Projects
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#about">
-                <a onClick={() => setMenuOpen(false)} className={styles.link}>
-                  About
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#contact">
-                <a onClick={() => setMenuOpen(false)} className={styles.link}>
-                  Contact
-                </a>
-              </Link>
-            </li>
-          </ul>
-        )}
-
-        <aside className={styles.orb}></aside>
+        <Container>
+          <div
+            className={classnames(styles.inner, {
+              [styles.scrolling]: scrollPosition > 100,
+            })}
+          >
+            <Link href="/">
+              <a className={styles.icon}>
+                <IconBee />
+              </a>
+            </Link>
+            <button className={styles.button} onClick={toggleMenu}>
+              <span className={utilStyles.visuallyHidden}>
+                {menuOpen ? "close" : "open"}
+              </span>
+              {menuOpen ? <IconClose /> : <IconOpen />}
+            </button>
+            {(menuOpen || !isMobile) && (
+              <ul className={styles.list}>
+                <li>
+                  <Link href="/#projects">
+                    <a
+                      onClick={() => setMenuOpen(false)}
+                      className={styles.link}
+                    >
+                      Projects
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#about">
+                    <a
+                      onClick={() => setMenuOpen(false)}
+                      className={styles.link}
+                    >
+                      About
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#contact">
+                    <a
+                      onClick={() => setMenuOpen(false)}
+                      className={styles.link}
+                    >
+                      Contact
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </div>
+        </Container>
       </nav>
     </header>
   );

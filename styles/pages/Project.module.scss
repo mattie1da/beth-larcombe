@@ -1,7 +1,7 @@
 @import "../mixins";
 
 .main {
-  padding-top: calc(var(--gutter) * 3.4);
+  padding-top: var(--roof);
   padding-bottom: var(--gutter);
 }
 

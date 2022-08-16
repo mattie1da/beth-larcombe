@@ -1,11 +1,64 @@
 @import "../mixins";
 
 .body {
-  margin-bottom: 0;
+  @include phone() {
+    margin-bottom: calc(var(--gutter) * 2);
+  }
+
+  @include desktop() {
+    margin-bottom: 0;
+    max-width: 42ch;
+  }
 }
 
-@include desktop() {
-  .wrapper {
-    // padding-top: 35vh;
+.project {
+  display: flex;
+  margin: 0 auto;
+  padding-top: calc(var(--gutter) * 1.5);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  min-height: 100vh;
+  max-width: var(--containerMaxWidth);
+
+  @include desktop() {
+    min-height: 120vh;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
   }
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 75%;
+}
+
+.content {
+  color: var(--yellow);
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 1;
+  position: sticky;
+  height: 100%;
+
+  .title,
+  .category {
+    color: inherit;
+  }
+
+  @include phone() {
+    top: 70vh;
+  }
+
+  @include desktop() {
+    top: 65vh;
+  }
+}
+
+.category {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
 }

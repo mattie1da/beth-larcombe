@@ -1,5 +1,14 @@
+@import "../../mixins";
+
 .wrapper {
   margin-bottom: var(--gutter);
+
+  @include desktop() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: var(--gutter);
+  }
 }
 
 .description {

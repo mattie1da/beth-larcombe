@@ -1,3 +1,10 @@
+@import "../../mixins";
+
 .icon {
+  cursor: pointer;
   height: 1.8rem;
+
+  @include desktop() {
+    height: 1.25rem;
+  }
 }

@@ -1,7 +1,14 @@
+@import "../../mixins";
+
 .buttons {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding-left: var(--gutter);
   padding-right: var(--gutter);
+
+  @include desktop() {
+    padding-left: calc((100vw - var(--containerMaxWidth)) / 2);
+    padding-right: calc((100vw - var(--containerMaxWidth)) / 2);
+  }
 }

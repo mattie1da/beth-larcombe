@@ -4,11 +4,37 @@ import { Navigation, Footer } from "../../layouts";
 import styles from "../../styles/pages/Project.module.scss";
 import { Project } from "../../layouts";
 import { breadcrumbs } from "../../helpers/breadcrumbs";
+import { ProjectInterface } from "../../types";
 
-const TheBlendAcademy: NextPage = () => {
+export async function getStaticPaths() {
   const data = require("../../lib/projects/data.json");
-  const index = 2;
-  const { meta, hero, intro, images } = data[index];
+
+  return {
+    paths: data.map((project: ProjectInterface) => {
+      return {
+        params: {
+          id: project.id,
+          slug: project.meta.slug,
+        },
+      };
+    }),
+    fallback: false, // use stock 404
+  };
+}
+
+export const getStaticProps = async (context) => {
+  const { slug } = context.params;
+  const data = require("../../lib/projects/data.json");
+
+  return {
+    props: {
+      project: data.find((project) => project.meta.slug === slug),
+    },
+  };
+};
+
+const ProjectPage: NextPage<ProjectInterface> = ({ project }) => {
+  const { id, meta, hero, intro, images } = project;
 
   return (
     <>
@@ -26,7 +52,7 @@ const TheBlendAcademy: NextPage = () => {
           hero={hero}
           intro={intro}
           images={images}
-          navigation={breadcrumbs(index)}
+          navigation={breadcrumbs(id)}
         />
       </main>
 
@@ -35,4 +61,4 @@ const TheBlendAcademy: NextPage = () => {
   );
 };
 
-export default TheBlendAcademy;
+export default ProjectPage;

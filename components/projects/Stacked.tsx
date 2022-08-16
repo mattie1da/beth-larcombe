@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../../styles/components/projects/Stacked.module.scss";
 import utilStyles from "../../styles/utils.module.scss";
 import { ButtonInterface, ImageInterface } from "../../types";
+import { IconEye } from "../icons";
 
 interface StackedProjectInterface {
   button: ButtonInterface;
@@ -35,12 +36,15 @@ export const StackedProject = ({
       <figcaption className={styles.caption}>
         <div>
           <span className={styles.category}>{category}</span>
-          <h2 className={classnames(utilStyles.heading2, styles.title)}>
-            {title}
-          </h2>
+          <h3 className={classnames(utilStyles.heading2, styles.title)}>
+            <Link href={button.href}>{title}</Link>
+          </h3>
         </div>
         <Link href={button.href}>
-          <a className={styles.button}>{button.text}</a>
+          <a className={styles.button}>
+            <span className={utilStyles.visuallyHidden}>{button.text}</span>
+            <IconEye />
+          </a>
         </Link>
       </figcaption>
     </figure>

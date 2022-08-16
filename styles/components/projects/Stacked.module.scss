@@ -1,9 +1,17 @@
 @import "../../mixins";
 
+$captionOffsetY: 8rem;
+
 .wrapper {
   margin: 0;
-  // max-width: 18.25rem;
-  // width: 75vw;
+
+  @include desktop() {
+    &:nth-child(even) {
+      .caption {
+        transform: translate($captionOffsetY, -11rem);
+      }
+    }
+  }
 }
 
 .image {
@@ -11,7 +19,7 @@
   position: relative;
 
   @include desktop() {
-    height: 40rem;
+    height: 30rem;
   }
 }
 
@@ -21,21 +29,16 @@
 }
 
 .caption {
-  background-color: hsl(var(--white));
-  color: hsl(var(--black));
-  padding: 1.2rem;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 1rem 1.2rem;
 
   @include desktop() {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    transform: translate(8rem, -10rem);
+    transform: translate($captionOffsetY, -8rem);
   }
-}
-
-.category,
-.title {
-  font-size: clamp(1rem, 1.7vw, 1.25rem);
 }
 
 .category {
@@ -44,16 +47,20 @@
 }
 
 .title {
+  @include phone() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .button {
   display: none;
 
   @include desktop() {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 }

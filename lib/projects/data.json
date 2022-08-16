@@ -1,19 +1,25 @@
 [
   {
+    "id": 0,
     "meta": {
+      "category": "Branding & Print",
       "description": "A wicked project I did - this appears when googling or sharing the page on twitter, linkedin, fb etc..",
-      "slug": "willo-remedies"
+      "slug": "willo-remedies",
+      "colors": {
+        "primary": "#006747",
+        "secondary": "#D79A31"
+      }
     },
     "hero": {
       "title": "Willo Remedies",
-      "category": "Brand & Digital",
+      "subTitle": "Branding & Print",
       "image": {
         "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
         "alt": "Cute puppy"
       }
     },
     "intro": {
-      "description": "Willo Remedies is a company focussed on providing customers with natural CBD remedies for the body and soul. Tasked with creating a brand from the ground up this concept looked at the brand from the more natural angle with CBD serving as a secondary benefit. A logo colour palette and product packaging such as balms and tinctures was created alongside full brand guidelines and social media suggestions.",
+      "description": "<p>Willo Remedies is a company focussed on providing customers with natural CBD remedies for the body and soul.</p><p>Tasked with creating a brand from the ground up this concept looked at the brand from the more natural angle with CBD serving as a secondary benefit. A logo colour palette and product packaging such as balms and tinctures was created alongside full brand guidelines and social media suggestions.</p>",
       "list": [
         "Logo creation",
         "Packaging design",
@@ -54,25 +60,32 @@
     ]
   },
   {
+    "id": 1,
     "meta": {
-      "slug": "tinkr"
+      "category": "Brand & Digital",
+      "description": "A wicked project I did - this appears when googling or sharing the page on twitter, linkedin, fb etc..",
+      "slug": "tinkr",
+      "colors": {
+        "primary": "#201B45",
+        "secondary": "#E30017"
+      }
     },
     "hero": {
       "title": "Tinkr",
-      "category": "Brand & Digital",
+      "subTitle": "Brand & Digital",
       "image": {
         "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
         "alt": "Cute puppy"
       }
     },
     "intro": {
-      "description": "Tinkr description here beth!",
+      "description": "<p>Tinkr is an up and coming app powered by artificial intelligence. Positioned as your own personal mentor in app form, it parses user's CVs and utilises data from other users to provide insight into your career.</p><p>The entire app needed branding from the ground up. This included logos, visual systems, messaging, app designs, brand guidelines and more.</p><p>These concepts focussed on different aspects of the brand; firstly, the individuality of each user and their journey. Secondly, the personable aspect of the app and it's mentor-like status.</p>",
       "list": [
-        "Being cute",
-        "Keeping it real",
-        "Having cool hair",
-        "Legendary designs",
-        "Providing fun facts"
+        "App Concepts",
+        "Logo Concept",
+        "Desktop Concept",
+        "Social Post Concept",
+        "3D Space Concept"
       ]
     },
     "images": [
@@ -107,25 +120,93 @@
     ]
   },
   {
+    "id": 2,
     "meta": {
-      "slug": "the-blend-academy"
+      "category": "Branding & Print",
+      "description": "A wicked project I did - this appears when googling or sharing the page on twitter, linkedin, fb etc..",
+      "slug": "the-blend-academy",
+      "colors": {
+        "primary": "#093D43",
+        "secondary": "#E2B05A"
+      }
     },
     "hero": {
       "title": "The Blend Academy",
-      "category": "Brand & Digital",
+      "subTitle": "Branding & Print",
       "image": {
         "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
         "alt": "Cute puppy"
       }
     },
     "intro": {
-      "description": "Blend academy description here beth!",
+      "description": "<p>The Winchester Distillery wanted to craft a new gin experience in the heart of Winchester with a bold new brand to boot.</p><p>After helping to choose a catchy name for the experience, I then had the pleasure of creating the logo, brand guidelines and illustrations for The Blend Academy, along with numerous pieces of printed collateral and interior design suggestions for the space.</p><p>This included print advertisements as well as window vinyls, bottle stickers, golden tickets, postcards and pull up banners to be used at events.</p>",
       "list": [
-        "Being cute",
-        "Keeping it real",
-        "Having cool hair",
-        "Legendary designs",
-        "Providing fun facts"
+        "Logo Design",
+        "Launch Leaflets",
+        "Launch Illustrations",
+        "Golden Tickets",
+        "Bottle Stickers",
+        "Ingredient Illustrations"
+      ]
+    },
+    "images": [
+      {
+        "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
+        "alt": "Cute puppy"
+      },
+      {
+        "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
+        "alt": "Cute puppy"
+      },
+      {
+        "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
+        "alt": "Cute puppy"
+      },
+      {
+        "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
+        "alt": "Cute puppy"
+      },
+      {
+        "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
+        "alt": "Cute puppy"
+      },
+      {
+        "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
+        "alt": "Cute puppy"
+      },
+      {
+        "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
+        "alt": "Cute puppy"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "meta": {
+      "category": "Brand & Digital",
+      "description": "A wicked project I did - this appears when googling or sharing the page on twitter, linkedin, fb etc..",
+      "slug": "tinkr",
+      "colors": {
+        "primary": "#201B45",
+        "secondary": "#E30017"
+      }
+    },
+    "hero": {
+      "title": "Trade House Media",
+      "subTitle": "Brand & Digital",
+      "image": {
+        "src": "https://www.portseattle.org/sites/default/files/styles/detailpageimagesize/public/2019-12/Police%20K9%20team_181114_307.jpg?itok=Ac3I1crY",
+        "alt": "Cute puppy"
+      }
+    },
+    "intro": {
+      "description": "<p>THM are an onine advertising agency who wanted a new look to help them stand out from the crowd.</p><p>I created a concept that looked at the digital aspect of their work but in an old-fashioned way, just like the traditional take they use with their clients. This led me to an 8-bit style with a bold, modern colour palette.</p><p>Utilising people-focussed photography, the brand had a fun, human edge that connected with clients and helped THM show they have a more personal touch.</p>",
+      "list": [
+        "App Concepts",
+        "Logo Concept",
+        "Desktop Concept",
+        "Social Post Concept",
+        "3D Space Concept"
       ]
     },
     "images": [

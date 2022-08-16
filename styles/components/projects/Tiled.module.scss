@@ -1,6 +1,6 @@
 @import "../../mixins";
 
-$yo: 3rem;
+$offset: 5rem;
 
 .wrapper {
   display: grid;
@@ -8,7 +8,8 @@ $yo: 3rem;
   position: relative;
 
   @include desktop() {
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1.5fr;
+    height: 100%;
   }
 }
 
@@ -18,29 +19,42 @@ $yo: 3rem;
 
 .square {
   aspect-ratio: 1 / 1;
-  transform: translateX($yo);
-  margin-left: calc(var(--gutter) * -2.2);
   z-index: 1;
+
+  @include phone() {
+    margin-left: calc((var(--gutter) * -1) - 3rem);
+    transform: translate(3rem, -4rem);
+  }
 
   @include desktop() {
     margin-left: 0;
+    transform: translateX($offset);
+    width: 100%;
   }
 }
 
 .large {
   height: 22rem;
   margin-right: calc(var(--gutter) * -1);
-  margin-top: $yo;
 
   @include desktop() {
-    // height: 40vw;
-    // max-height: 40rem;
+    align-self: flex-end;
+    height: calc(100% - $offset);
+    max-width: 23rem;
     margin-right: 0;
   }
 }
 
 .button {
   position: absolute;
-  right: 0;
-  top: 0;
+
+  @include phone() {
+    right: 0;
+    top: calc(($offset * -1) + 0.4rem);
+  }
+
+  @include desktop() {
+    right: calc(24rem + $offset);
+    bottom: 3px;
+  }
 }

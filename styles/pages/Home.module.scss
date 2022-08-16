@@ -2,20 +2,15 @@
 
 .hero {
   align-items: flex-end;
-  display: flex;
   padding-top: var(--roof);
-  min-height: 95vh;
+  min-height: 100vh;
 
-  // @include desktop() {
-  //   align-items: flex-end;
-  //   display: flex;
-  //   min-height: 100vh;
-  //   padding-bottom: var(--gutter);
-  // }
+  @include desktop() {
+    grid-template-columns: 1fr 1.25fr;
+    padding-bottom: var(--gutter);
+  }
 }
 
-@include desktop() {
-  // .heroGrid {
-  //   align-items: flex-end;
-  // }
+.subTitle {
+  margin-bottom: 0;
 }

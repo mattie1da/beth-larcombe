@@ -9,24 +9,28 @@
     sans-serif;
 
   /* colors */
-  --black: 0, 0%, 22%;
-  --white: 0, 0%, 100%;
+  --black: #383838;
+  --white: #ffffff;
 
-  --lavender: 272, 56%, 75%;
-  --yellow: 54, 100%, 96%;
-  --teal: 183, 56%, 75%;
+  --lavender: #c29ce3;
+  --yellow: #fffdea;
+  --teal: #9ce0e3;
 
-  --green: 126, 53%, 71%;
-  --pink: 309, 79%, 82%;
+  --green: #89dfa9;
+  --pink: #eda9e9;
 
   /* spacing */
   --gutter: 2.5rem;
   --roof: 9rem;
+  --containerMaxWidth: 80rem;
+
+  --animationGradient: 15s ease infinite;
 }
 
 @include desktop() {
   :root {
-    --gutter: 7.125rem;
+    --gutter: 5.7rem;
+    --roof: 7rem;
   }
 }
 
@@ -47,13 +51,14 @@
 html,
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: hsl(var(--yellow));
-  color: hsl(var(--black));
+  background-color: var(--yellow);
+  color: var(--black);
   line-height: 1.5;
+  font-size: clamp(16px, 2vw, 20px);
   font-family: var(--fontForum);
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 h1,
@@ -67,11 +72,16 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(2.815rem, 8vw, 7.5rem);
+  font-size: clamp(2.815rem, 5.5vw, 6rem);
 }
 
 h2 {
-  font-size: clamp(1.25rem, 3vw, 1.875rem);
+  font-size: clamp(1.25rem, 1.6vw, 1.5rem);
+  margin-bottom: 1.85rem;
+}
+
+h3 {
+  font-size: inherit;
 }
 
 h2 + h3 {
@@ -81,6 +91,10 @@ h2 + h3 {
 
 p {
   max-width: 34.5ch;
+
+  @include desktop() {
+    max-width: 47ch;
+  }
 }
 
 a {

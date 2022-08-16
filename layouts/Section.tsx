@@ -1,8 +1,9 @@
 import { Container } from "./";
 import utilStyles from "../styles/utils.module.scss";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import classnames from "classnames";
 import styles from "../styles/layouts/Section.module.scss";
+import { gsap } from "gsap";
 
 interface SectionInterface {
   background?: string;
@@ -23,24 +24,42 @@ export const Section = ({
   variant,
   id,
 }: SectionInterface) => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (background === "gradient") {
+      gsap.to(sectionRef.current, {
+        scrollTrigger: {
+          scrub: true,
+          trigger: sectionRef.current,
+        },
+        backgroundPosition: "0% 100%",
+      });
+    }
+  }, [background]);
+
   return (
     <section
       id={id}
+      ref={sectionRef}
       className={classnames(styles.section, {
         [styles.gradient]: background === "gradient",
         [styles.lavender]: background === "lavender",
         [styles.about]: variant === "about",
+        [styles.footer]: variant === "footer",
         [styles.center]: center,
       })}
     >
       {contain ? (
         <Container>
-          {title && (
-            <h2 className={classnames(styles.title, utilStyles.heading2)}>
-              {title}
-            </h2>
-          )}
-          {children}
+          <div className={variant === "about" ? styles.aboutGrid : ""}>
+            {title && (
+              <h2 className={classnames(styles.title, utilStyles.heading2)}>
+                {title}
+              </h2>
+            )}
+            {children}
+          </div>
         </Container>
       ) : (
         <div>

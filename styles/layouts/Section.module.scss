@@ -1,11 +1,16 @@
 @import "../mixins";
+@import "../animations";
 
 .section {
+  @include phone() {
+    scroll-margin-top: calc(var(--roof) / 1.75); // offset anchor links
+  }
+
   padding-top: calc(var(--gutter) * 1.5);
   padding-bottom: calc(var(--gutter) * 1.5);
-  scroll-margin-top: calc(var(--gutter) * 3); // offset anchor links
 
   @include desktop() {
+    scroll-margin-top: calc(var(--roof) / 1.75);
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
   }
@@ -16,25 +21,40 @@
 }
 
 .gradient {
+  // animation: gradient 30s ease infinite;
   background: linear-gradient(
     to bottom right,
-    hsl(var(--teal)),
-    hsl(var(--green))
+    var(--lavender),
+    var(--pink),
+    var(--teal),
+    var(--teal),
+    var(--green),
+    var(--lavender),
+    var(--pink),
+    var(--teal),
+    var(--green),
+    var(--green),
+    var(--green),
+    var(--teal),
+    var(--lavender)
   );
-  color: hsl(var(--yellow));
+  background-size: 400% 400%;
+  color: var(--yellow);
 
   .title {
-    color: hsl(var(--yellow));
+    color: var(--yellow);
   }
 }
 
 .lavender {
+  animation: pulse 2s ease-in-out infinite;
   background: radial-gradient(
     at center bottom,
-    #eda9e9,
-    hsl(var(--lavender)) 80%
+    var(--pink),
+    var(--lavender) 40%
   );
-  color: hsl(var(--yellow));
+  background-position: center center;
+  color: var(--yellow);
 }
 
 .title {
@@ -42,9 +62,46 @@
 }
 
 .padLeft {
-  padding-left: var(--gutter);
+  @include phone() {
+    padding-left: var(--gutter);
+  }
+  @include desktop() {
+    padding-left: calc((100vw - var(--containerMaxWidth)) / 2);
+  }
 }
 
 .about {
   padding-bottom: 12.125rem;
+
+  @include desktop() {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+}
+
+.aboutGrid {
+  @include phone() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include desktop() {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+
+    > :nth-child(2) {
+      grid-row: 2;
+      grid-column: 2;
+
+      p {
+        max-width: 50ch;
+      }
+    }
+  }
+}
+@include desktop() {
+  .footer {
+    padding-bottom: 0;
+  }
 }

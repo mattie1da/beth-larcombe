@@ -1,13 +1,13 @@
 import {
-  ProjectHero,
   ProjectIntro,
   ProjectGallery,
   ProjectNavigation,
 } from "../components/project";
 import { ProjectInterface } from "../types";
-import { Section } from "./Section";
+import { Section, Hero } from "./";
 
 export const Project = ({
+  meta,
   hero,
   intro,
   images,
@@ -15,11 +15,11 @@ export const Project = ({
 }: ProjectInterface) => {
   return (
     <>
-      <ProjectHero {...hero} />
+      <Hero {...hero} colors={meta.colors} />
       <Section>
-        <ProjectIntro {...intro} />
+        <ProjectIntro {...intro} bulletColor={meta.colors.secondary} />
         <ProjectGallery images={images} />
-        <ProjectNavigation {...navigation} />
+        {/* <ProjectNavigation {...navigation} /> */}
       </Section>
     </>
   );

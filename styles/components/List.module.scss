@@ -5,7 +5,7 @@
 
 .item {
   &::before {
-    background-color: hsl(var(--teal));
+    background-color: var(--bullet-color);
     border-radius: 50%;
     content: "";
     position: absolute;
@@ -14,4 +14,8 @@
     height: 0.5rem;
     width: 0.5rem;
   }
+}
+
+.title {
+  margin-top: 0;
 }

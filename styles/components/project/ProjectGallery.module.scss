@@ -1,32 +1,99 @@
-$columnGap: 1rem;
-$offset: -2.5rem;
+@import "../../mixins";
 
 .grid {
+  --offset: -2.5rem;
+  --columnGap: 1rem;
+
   display: grid;
+
+  @include desktop() {
+    --offset: -6rem;
+  }
+}
+
+.gridTwo {
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: $columnGap;
-  grid-row-gap: var(--gutter);
-  grid-template-rows: 90vw 75vw 75vw 110vw 110vw 110vw;
+  grid-column-gap: var(--columnGap);
+
+  // & > :nth-last-child(-n + 3) {
+  //   grid-column: span 2;
+  //   margin-left: var(--gutter);
+  //   margin-right: var(--gutter);
+  // }
+
+  @include phone() {
+    grid-template-rows: 90vw 75vw 75vw;
+    grid-row-gap: var(--gutter);
+    margin-bottom: var(--gutter);
+
+    & > :nth-child(1) {
+      grid-column: span 2;
+      max-width: 69vw;
+    }
+
+    & > :nth-child(2) {
+      transform: translateY(var(--offset));
+      margin-top: var(--columnGap);
+      grid-column: 2;
+    }
+
+    & > :nth-child(4) {
+      transform: translateY(var(--offset));
+    }
+  }
+
+  @include desktop() {
+    grid-row-gap: calc(var(--gutter) * 2);
+    grid-template-rows: 100vh 100vh;
+    margin-bottom: calc(var(--gutter) * 3);
+    padding-left: calc((100vw - var(--containerMaxWidth)) / 2);
+    padding-right: calc((100vw - var(--containerMaxWidth)) / 2);
+
+    & > :nth-child(2) {
+      align-self: center;
+      justify-self: flex-end;
+      max-width: 25rem;
+      height: 100%;
+      width: 100%;
+      max-height: 30rem;
+    }
+
+    & > :nth-child(4) {
+      transform: translateY(var(--offset));
+    }
+  }
+}
+
+.gridThree {
   margin-bottom: var(--gutter);
 
-  & > :nth-child(1) {
-    grid-column: span 2;
-    max-width: 69vw;
+  @include phone() {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    row-gap: 1rem;
+    grid-template-columns: 1fr;
+
+    & > * {
+      height: 90vw;
+    }
   }
 
-  & > :nth-child(2) {
-    transform: translateY($offset);
-    margin-top: $columnGap;
-    grid-column: 2;
-  }
+  @include desktop() {
+    column-gap: var(--columnGap);
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: calc((100vw - var(--containerMaxWidth)) / 2);
+    padding-right: calc((100vw - var(--containerMaxWidth)) / 2);
 
-  & > :nth-child(4) {
-    transform: translateY($offset);
-  }
+    & > * {
+      height: 75vh;
+    }
 
-  & > :nth-last-child(-n + 3) {
-    grid-column: span 2;
-    margin-left: var(--gutter);
-    margin-right: var(--gutter);
+    & > :nth-child(2) {
+      transform: translateY(var(--offset));
+    }
+
+    & > :nth-child(3) {
+      transform: translateY(calc(var(--offset) * 2));
+    }
   }
 }

@@ -41,7 +41,7 @@ export const Form = () => {
         Your message
       </label>
       <textarea
-        className={styles.input}
+        className={classnames(styles.input, styles.message)}
         id="message"
         name="message"
         rows={6}

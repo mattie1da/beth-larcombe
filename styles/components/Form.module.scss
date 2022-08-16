@@ -1,24 +1,44 @@
+@import "../mixins";
+
 .form {
   display: grid;
   row-gap: 0.9rem;
-  margin-bottom: var(--gutter);
+  max-width: 34.75rem;
+  margin: 0 auto var(--gutter);
+  text-align: center;
+
+  @include desktop() {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
 }
 
 .input {
-  color: hsl(var(--yellow));
+  color: var(--yellow);
   font-size: inherit;
   font-family: inherit;
   padding: 0.9rem 1rem;
   background-color: transparent;
-  border: 2px solid hsl(var(--yellow));
+  border: 2px solid var(--yellow);
   border-radius: 0;
 
   &::placeholder {
-    color: hsl(var(--yellow));
+    color: var(--yellow);
+  }
+}
+
+.message {
+  @include desktop() {
+    grid-column: 1 / -1;
   }
 }
 
 .submit {
-  margin-top: 1rem;
+  cursor: pointer;
   justify-self: center;
+  margin-top: 1rem;
+
+  @include desktop() {
+    grid-column: 1 / -1;
+  }
 }

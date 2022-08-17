@@ -19,7 +19,7 @@ export const Project = ({
       <Section>
         <ProjectIntro {...intro} bulletColor={meta.colors.secondary} />
         <ProjectGallery images={images} />
-        {/* <ProjectNavigation {...navigation} /> */}
+        <ProjectNavigation {...navigation} />
       </Section>
     </>
   );

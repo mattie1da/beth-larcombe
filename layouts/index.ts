@@ -4,3 +4,4 @@ export * from "./Hero";
 export * from "./Section";
 export * from "./Footer";
 export * from "./Project";
+export * from "./Meta";

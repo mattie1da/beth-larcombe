@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Navigation, Footer } from "../../layouts";
+import { Navigation, Footer, Meta } from "../../layouts";
 import styles from "../../styles/pages/Project.module.scss";
 import { Project } from "../../layouts";
-import { breadcrumbs } from "../../helpers/breadcrumbs";
 import { ProjectInterface } from "../../types";
+import { breadcrumbs } from "../../helpers/breadcrumbs";
 
+// make all the pages/urls at build time
 export async function getStaticPaths() {
   const data = require("../../lib/projects/data.json");
 
@@ -22,37 +23,40 @@ export async function getStaticPaths() {
   };
 }
 
+// get the data for a specific page based on it's slug
 export const getStaticProps = async (context) => {
   const { slug } = context.params;
   const data = require("../../lib/projects/data.json");
 
+  const project = data.find(
+    (project: ProjectInterface) => project.meta.slug === slug
+  );
+
   return {
     props: {
-      project: data.find((project) => project.meta.slug === slug),
+      project,
+      breadcrumbs: breadcrumbs(project.id),
     },
   };
 };
 
-const ProjectPage: NextPage<ProjectInterface> = ({ project }) => {
+const ProjectPage: NextPage<ProjectInterface> = ({ project, breadcrumbs }) => {
   const { id, meta, hero, intro, images } = project;
 
   return (
     <>
-      <Head>
-        <title>{`Beth Larcombe - ${hero.title}`}</title>
-        <meta name="description" content={meta.description} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta title={`Beth Larcombe - ${hero.title}`} />
 
       <Navigation />
 
       <main className={styles.main}>
         <Project
+          id={id}
           meta={meta}
           hero={hero}
           intro={intro}
           images={images}
-          navigation={breadcrumbs(id)}
+          navigation={breadcrumbs}
         />
       </main>
 

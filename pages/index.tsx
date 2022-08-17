@@ -3,7 +3,14 @@ import Head from "next/head";
 import classnames from "classnames";
 import { TiledProject } from "../components/projects";
 import { StackedProject } from "../components/projects/Stacked";
-import { Navigation, Container, Hero, Section, Footer } from "../layouts/";
+import {
+  Navigation,
+  Container,
+  Hero,
+  Section,
+  Footer,
+  Meta,
+} from "../layouts/";
 import styles from "../styles/pages/Home.module.scss";
 import utilStyles from "../styles/utils.module.scss";
 import { carouselItemInterface, ProjectInterface } from "../types";
@@ -34,14 +41,7 @@ export const getStaticProps = async () => {
 const Home: NextPage<homepageInterface> = ({ homepageData }) => {
   return (
     <>
-      <Head>
-        <title>Beth Larcombe - Graphic Designer</title>
-        <meta
-          name="description"
-          content="A multi-disciplined designer based in Southampton with over 6 years experience on a variety of brand, print & digital projects."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta />
 
       <Navigation />
 

@@ -39,5 +39,8 @@
   display: flex;
   justify-content: center;
   margin-left: calc(var(--gutter) * -1);
-  margin-top: -2rem;
+
+  @include desktop() {
+    margin-top: -2rem;
+  }
 }

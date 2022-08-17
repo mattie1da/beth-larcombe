@@ -4,7 +4,17 @@ const nextConfig = {
   swcMinify: true,
 
   images: {
-    domains: ["www.oliverpetcare.com", "www.portseattle.org"],
+    domains: ["localhost"],
+  },
+
+  async redirects() {
+    return [
+      {
+        source: "/projects",
+        destination: "/#projects",
+        permanent: true,
+      },
+    ];
   },
 };
 

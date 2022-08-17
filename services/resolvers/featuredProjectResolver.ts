@@ -9,8 +9,8 @@ export const featuredProjectResolver = (data: ProjectInterface) => {
         alt: data.images[0].alt,
       },
       {
-        src: data.images[1].src,
-        alt: data.images[1].alt,
+        src: data.hero.image && data.hero.image.src,
+        alt: data.hero.image && data.hero.image.alt,
       },
     ],
   };

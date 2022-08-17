@@ -3,8 +3,8 @@ import Image from "next/image";
 import utilStyles from "../styles/utils.module.scss";
 import styles from "../styles/layouts/Hero.module.scss";
 import { HeroInterface } from "../types";
-import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
+import { heroAnimation } from "../components/animations/Hero";
 
 export const Hero = ({
   title,
@@ -17,36 +17,18 @@ export const Hero = ({
   const titleRef = useRef(null);
   const subTitleRef = useRef(null);
   const overlayRef = useRef(null);
+  const darkOverlayRef = useRef(null);
 
   useEffect(() => {
     if (image) {
-      gsap.to(titleRef.current, {
-        scrollTrigger: {
-          trigger: figureRef.current,
-          scrub: true,
-          start: "0%",
-          end: "30%",
-        },
-        color: colors.primary,
-      });
-      gsap.to(subTitleRef.current, {
-        scrollTrigger: {
-          trigger: figureRef.current,
-          scrub: true,
-          start: "5%",
-          end: "30%",
-        },
-        color: colors.secondary,
-      });
-      gsap.to(overlayRef.current, {
-        background: `linear-gradient(transparent, #fffdea)`,
-        scrollTrigger: {
-          trigger: figureRef.current,
-          scrub: true,
-          start: "0%",
-          end: "20%",
-        },
-      });
+      heroAnimation(
+        figureRef.current,
+        titleRef.current,
+        subTitleRef.current,
+        overlayRef.current,
+        darkOverlayRef.current,
+        colors
+      );
     }
   }, [image]);
   return image ? (
@@ -56,7 +38,12 @@ export const Hero = ({
         [styles.project]: image,
       })}
     >
-      <Image src={image.src} alt={image.alt} layout="fill" objectFit="cover" />
+      <Image
+        src={`http://localhost:3000${image.src}`}
+        alt={image.alt}
+        layout="fill"
+        objectFit="cover"
+      />
       <figcaption className={styles.content}>
         <h1
           ref={titleRef}
@@ -71,6 +58,7 @@ export const Hero = ({
           {subTitle}
         </h2>
       </figcaption>
+      <aside ref={darkOverlayRef} className={styles.darkOverlay}></aside>
       <aside ref={overlayRef} className={styles.overlay}></aside>
     </figure>
   ) : (

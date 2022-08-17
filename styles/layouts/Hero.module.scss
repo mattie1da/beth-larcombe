@@ -27,12 +27,17 @@
   }
 }
 
-.overlay {
+.overlay,
+.darkOverlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 75%;
+  height: 80%;
+}
+
+.darkOverlay {
+  background: linear-gradient(transparent, var(--black));
 }
 
 .content {

@@ -1,7 +1,7 @@
 import classnames from "classnames";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { IconBee, IconClose, IconOpen } from "../components/icons";
+import { IconBee, IconClose, IconFlower, IconOpen } from "../components/icons";
 import utilStyles from "../styles/utils.module.scss";
 import styles from "../styles/layouts/Navigation.module.scss";
 import { Container } from "./Container";
@@ -98,6 +98,11 @@ export const Navigation = () => {
           </div>
         </Container>
       </nav>
+      <Container>
+        <div className={styles.flower}>
+          <IconFlower color="var(--teal)" />
+        </div>
+      </Container>
     </header>
   );
 };

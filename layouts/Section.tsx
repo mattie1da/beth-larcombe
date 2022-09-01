@@ -4,6 +4,7 @@ import { ReactNode, useEffect, useRef } from "react";
 import classnames from "classnames";
 import styles from "../styles/layouts/Section.module.scss";
 import { gsap } from "gsap";
+import { IconFlower } from "../components/icons";
 
 interface SectionInterface {
   background?: string;
@@ -60,9 +61,22 @@ export const Section = ({
             )}
             {children}
           </div>
+          {variant === "about" && (
+            <>
+              <div className={classnames(styles.flower, styles.flowerLavender)}>
+                <IconFlower />
+              </div>
+              <div className={classnames(styles.flower, styles.flowerPink)}>
+                <IconFlower color="var(--pink)" />
+              </div>
+              <div className={classnames(styles.flower, styles.flowerTeal)}>
+                <IconFlower color="var(--teal)" />
+              </div>
+            </>
+          )}
         </Container>
       ) : (
-        <div>
+        <div className={styles.wrapper}>
           {title && (
             <h2
               className={classnames(

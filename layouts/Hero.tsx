@@ -5,6 +5,11 @@ import styles from "../styles/layouts/Hero.module.scss";
 import { HeroInterface } from "../types";
 import { useEffect, useRef } from "react";
 import { heroAnimation } from "../components/animations/Hero";
+import { IconFlower } from "../components/icons";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = ({
   title,
@@ -20,7 +25,7 @@ export const Hero = ({
   const darkOverlayRef = useRef(null);
 
   useEffect(() => {
-    if (image) {
+    if (image && colors) {
       heroAnimation(
         figureRef.current,
         titleRef.current,
@@ -29,8 +34,11 @@ export const Hero = ({
         darkOverlayRef.current,
         colors
       );
+
+      return () => ScrollTrigger.getAll().map((item) => item.kill());
     }
-  }, [image]);
+  }, [image, colors]);
+
   return image ? (
     <figure
       ref={figureRef}
@@ -43,6 +51,7 @@ export const Hero = ({
         alt={image.alt}
         layout="fill"
         objectFit="cover"
+        priority
       />
       <figcaption className={styles.content}>
         <h1
@@ -60,6 +69,9 @@ export const Hero = ({
       </figcaption>
       <aside ref={darkOverlayRef} className={styles.darkOverlay}></aside>
       <aside ref={overlayRef} className={styles.overlay}></aside>
+      <div className={styles.flower}>
+        <IconFlower color="var(--pink)" />
+      </div>
     </figure>
   ) : (
     <div className={styles.hero}>

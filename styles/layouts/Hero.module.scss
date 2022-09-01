@@ -17,13 +17,13 @@
   padding-top: calc(var(--gutter) * 1.5);
   padding-left: var(--gutter);
   padding-right: var(--gutter);
+  padding-bottom: var(--gutter);
   min-height: 100vh;
-  max-width: var(--containerMaxWidth);
+  max-width: calc(var(--containerMaxWidth) - 3rem);
 
   @include desktop() {
     min-height: 120vh;
     padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
   }
 }
 

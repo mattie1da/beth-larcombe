@@ -16,7 +16,7 @@ export const Project = ({
   return (
     <>
       <Hero {...hero} colors={meta.colors} />
-      <Section>
+      <Section bleed>
         <ProjectIntro {...intro} bulletColor={meta.colors.secondary} />
         <ProjectGallery images={images} />
         <ProjectNavigation {...navigation} />

@@ -5,6 +5,8 @@
   --columnGap: 1rem;
 
   display: grid;
+  max-width: var(--containerMaxWidth);
+  margin: 0 auto;
 
   @include desktop() {
     --offset: -6rem;
@@ -46,8 +48,8 @@
     grid-row-gap: calc(var(--gutter) * 2);
     grid-template-rows: 100vh 100vh;
     margin-bottom: calc(var(--gutter) * 3);
-    padding-left: calc((100vw - var(--containerMaxWidth)) / 2);
-    padding-right: calc((100vw - var(--containerMaxWidth)) / 2);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 
     & > :nth-child(2) {
       align-self: center;
@@ -81,8 +83,8 @@
   @include desktop() {
     column-gap: var(--columnGap);
     grid-template-columns: repeat(3, 1fr);
-    padding-left: calc((100vw - var(--containerMaxWidth)) / 2);
-    padding-right: calc((100vw - var(--containerMaxWidth)) / 2);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 
     & > * {
       height: 75vh;

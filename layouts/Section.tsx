@@ -11,6 +11,7 @@ interface SectionInterface {
   center?: Boolean;
   children: ReactNode;
   contain?: Boolean;
+  bleed?: Boolean;
   title?: string;
   variant?: string;
   id?: string;
@@ -18,6 +19,7 @@ interface SectionInterface {
 
 export const Section = ({
   background,
+  bleed,
   center,
   children,
   contain,
@@ -76,7 +78,7 @@ export const Section = ({
           )}
         </Container>
       ) : (
-        <div className={styles.wrapper}>
+        <div className={classnames({ [styles.wrapper]: !bleed })}>
           {title && (
             <h2
               className={classnames(

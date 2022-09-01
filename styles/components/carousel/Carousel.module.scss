@@ -1,8 +1,6 @@
 @import "../../mixins";
 
 .wrapper {
-  overflow: hidden;
-
   @include phone() {
     padding-left: var(--gutter);
   }

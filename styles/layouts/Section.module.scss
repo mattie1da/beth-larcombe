@@ -20,6 +20,11 @@
   text-align: center;
 }
 
+.wrapper {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .gradient {
   // animation: gradient 30s ease infinite;
   background: linear-gradient(
@@ -96,6 +101,7 @@
 
       p {
         max-width: 50ch;
+        margin-top: -2rem;
       }
     }
   }
@@ -103,5 +109,27 @@
 @include desktop() {
   .footer {
     padding-bottom: 0;
+  }
+}
+
+.flower {
+  position: absolute;
+
+  &.flowerLavender {
+    top: 100%;
+    left: 0;
+  }
+
+  &.flowerPink {
+    bottom: -2rem;
+    left: 16rem;
+    max-width: 7rem;
+  }
+
+  &.flowerTeal {
+    z-index: 1;
+    bottom: calc(100% - 7rem);
+    right: 7rem;
+    width: 23rem;
   }
 }

@@ -5,6 +5,7 @@ import styles from "../../styles/pages/Project.module.scss";
 import { Project } from "../../layouts";
 import { BreadcrumbsInterface, ProjectInterface } from "../../types";
 import { breadcrumbs } from "../../helpers/breadcrumbs";
+import { IconFlower } from "../../components/icons";
 
 // make all the pages/urls at build time
 export async function getStaticPaths() {
@@ -55,6 +56,9 @@ const ProjectPage = ({ project, breadcrumbs }: ProjectPageInterface) => {
       <Navigation />
 
       <main className={styles.main}>
+        <div className={styles.navFlower}>
+          <IconFlower />
+        </div>
         <Project
           id={id}
           meta={meta}

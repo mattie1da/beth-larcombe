@@ -1,9 +1,14 @@
 @import "../mixins";
 
 .main {
+  overflow: hidden;
   padding-top: var(--roof);
   padding-bottom: var(--gutter);
 }
 
-@include desktop() {
+.navFlower {
+  position: absolute;
+  right: -8rem;
+  top: -8rem;
+  width: 30rem;
 }

@@ -98,11 +98,6 @@ export const Navigation = () => {
           </div>
         </Container>
       </nav>
-      <Container>
-        <div className={styles.flower}>
-          <IconFlower color="var(--teal)" />
-        </div>
-      </Container>
     </header>
   );
 };

@@ -49,6 +49,9 @@ const Home: NextPage<homepageInterface> = ({ homepageData }) => {
 
       <main style={{ overflow: "hidden" }}>
         <Container>
+          <div className={styles.navFlower}>
+            <IconFlower />
+          </div>
           <section className={classnames(utilStyles.grid, styles.hero)}>
             <Hero
               title="Beth Larcombe"

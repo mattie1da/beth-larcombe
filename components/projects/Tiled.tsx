@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../../styles/components/projects/Tiled.module.scss";
 import utilStyles from "../../styles/utils.module.scss";
 import { ButtonInterface, ImageInterface } from "../../types";
+import { IconFlower } from "../icons";
 
 interface TiledProjectInterface {
   button: ButtonInterface;
@@ -13,6 +14,9 @@ interface TiledProjectInterface {
 export const TiledProject = ({ button, images }: TiledProjectInterface) => {
   return (
     <div className={styles.wrapper}>
+      <div className={styles.flower}>
+        <IconFlower color="var(--pink)" />
+      </div>
       <div className={classnames(styles.image, styles.square)}>
         <Image
           src={images[0].src}
@@ -28,12 +32,12 @@ export const TiledProject = ({ button, images }: TiledProjectInterface) => {
           layout="fill"
           objectFit="cover"
         />
+        <Link href={button.href}>
+          <a className={classnames(styles.button, utilStyles.button)}>
+            {button.text}
+          </a>
+        </Link>
       </div>
-      <Link href={button.href}>
-        <a className={classnames(styles.button, utilStyles.button)}>
-          {button.text}
-        </a>
-      </Link>
     </div>
   );
 };

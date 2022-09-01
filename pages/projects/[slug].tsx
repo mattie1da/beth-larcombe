@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Navigation, Footer, Meta } from "../../layouts";
 import styles from "../../styles/pages/Project.module.scss";
 import { Project } from "../../layouts";
-import { ProjectInterface } from "../../types";
+import { BreadcrumbsInterface, ProjectInterface } from "../../types";
 import { breadcrumbs } from "../../helpers/breadcrumbs";
 
 // make all the pages/urls at build time
@@ -24,6 +24,7 @@ export async function getStaticPaths() {
 }
 
 // get the data for a specific page based on it's slug
+// @ts-ignore
 export const getStaticProps = async (context) => {
   const { slug } = context.params;
   const data = require("../../lib/projects/data.json");
@@ -40,13 +41,17 @@ export const getStaticProps = async (context) => {
   };
 };
 
-const ProjectPage: NextPage<ProjectInterface> = ({ project, breadcrumbs }) => {
+interface ProjectPageInterface {
+  project: ProjectInterface;
+  breadcrumbs: BreadcrumbsInterface;
+}
+
+const ProjectPage = ({ project, breadcrumbs }: ProjectPageInterface) => {
   const { id, meta, hero, intro, images } = project;
 
   return (
     <>
       <Meta title={`Beth Larcombe - ${hero.title}`} />
-
       <Navigation />
 
       <main className={styles.main}>

@@ -1,10 +1,7 @@
-import { ImageInterface } from "./";
+import { ImageInterface, ColorsInterface } from "./";
 
 export interface HeroInterface {
-  colors: {
-    primary: string;
-    secondary: string;
-  };
+  colors?: ColorsInterface;
   title: string;
   subTitle: string;
   body: string;

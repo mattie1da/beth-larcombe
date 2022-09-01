@@ -35,11 +35,13 @@ export const Hero = ({
         colors
       );
 
-      return () => ScrollTrigger.getAll().map((item) => item.kill());
+      return () => {
+        ScrollTrigger.getAll().map((item) => item.kill());
+      };
     }
   }, [image, colors]);
 
-  return image ? (
+  return image && colors ? (
     <figure
       ref={figureRef}
       className={classnames(styles.hero, {

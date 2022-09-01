@@ -1,12 +1,13 @@
 import { gsap } from "gsap";
+import { ColorsInterface } from "../../types/colors";
 
 export const heroAnimation = (
-  figure: HTMLElement,
-  title: HTMLElement,
-  subTitle: HTMLElement,
-  overlay: HTMLElement,
-  darkOverlay: HTMLElement,
-  colors
+  figure: any,
+  title: any,
+  subTitle: any,
+  overlay: any,
+  darkOverlay: any,
+  colors: ColorsInterface
 ) => {
   gsap.to(title, {
     scrollTrigger: {

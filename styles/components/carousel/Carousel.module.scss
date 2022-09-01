@@ -1,9 +1,6 @@
 @import "../../mixins";
 
 .wrapper {
-  @include phone() {
-    padding-left: var(--gutter);
-  }
   @include desktop() {
     padding-left: calc((100vw - var(--containerMaxWidth)) / 2);
   }

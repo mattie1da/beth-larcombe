@@ -23,6 +23,7 @@ export const TiledProject = ({ button, images }: TiledProjectInterface) => {
           alt={images[0].alt}
           layout="fill"
           objectFit="cover"
+          priority
         />
       </div>
       <div className={classnames(styles.image, styles.large)}>
@@ -31,6 +32,7 @@ export const TiledProject = ({ button, images }: TiledProjectInterface) => {
           alt={images[1].alt}
           layout="fill"
           objectFit="cover"
+          priority
         />
         <Link href={button.href}>
           <a className={classnames(styles.button, utilStyles.button)}>

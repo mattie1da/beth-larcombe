@@ -49,7 +49,7 @@ export const Hero = ({
       })}
     >
       <Image
-        src={`http://localhost:3000${image.src}`}
+        src={image.src}
         alt={image.alt}
         layout="fill"
         objectFit="cover"

@@ -64,3 +64,11 @@ $captionOffsetY: 8rem;
     align-items: center;
   }
 }
+
+.flower {
+  position: absolute;
+  top: -4rem;
+  right: -4rem;
+  max-width: 8rem;
+  z-index: 1;
+}

@@ -13,6 +13,13 @@ $offset: 5rem;
   }
 }
 
+.flower {
+  position: absolute;
+  left: -5rem;
+  top: 5rem;
+  width: 14rem;
+}
+
 .image {
   position: relative;
 }
@@ -47,14 +54,16 @@ $offset: 5rem;
 
 .button {
   position: absolute;
+  z-index: 1;
+  width: max-content;
 
   @include phone() {
-    right: 0;
+    right: 2rem;
     top: calc(($offset * -1) + 0.4rem);
   }
 
   @include desktop() {
-    right: calc(24rem + $offset);
+    right: calc(100% + 2rem);
     bottom: 3px;
   }
 }

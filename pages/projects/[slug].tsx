@@ -56,8 +56,10 @@ const ProjectPage = ({ project, breadcrumbs }: ProjectPageInterface) => {
       <Navigation />
 
       <main className={styles.main}>
-        <div className={styles.navFlower}>
-          <IconFlower />
+        <div className={styles.navFlowerWrapper}>
+          <div className={styles.navFlower}>
+            <IconFlower />
+          </div>
         </div>
         <Project
           id={id}

@@ -17,15 +17,9 @@
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: var(--columnGap);
 
-  // & > :nth-last-child(-n + 3) {
-  //   grid-column: span 2;
-  //   margin-left: var(--gutter);
-  //   margin-right: var(--gutter);
-  // }
-
   @include phone() {
-    grid-template-rows: 90vw 75vw 75vw;
     grid-row-gap: var(--gutter);
+    grid-template-rows: 90vw 75vw 75vw;
     margin-bottom: var(--gutter);
 
     & > :nth-child(1) {
@@ -46,10 +40,14 @@
 
   @include desktop() {
     grid-row-gap: calc(var(--gutter) * 2);
-    grid-template-rows: 100vh 100vh;
     margin-bottom: calc(var(--gutter) * 3);
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+
+    & > * {
+      height: 60vw;
+      max-height: 100vh;
+    }
 
     & > :nth-child(2) {
       align-self: center;
@@ -87,7 +85,8 @@
     padding-right: 1.5rem;
 
     & > * {
-      height: 75vh;
+      height: 38vw;
+      max-height: 30rem;
     }
 
     & > :nth-child(2) {

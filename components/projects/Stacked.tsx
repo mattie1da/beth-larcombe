@@ -4,13 +4,14 @@ import Link from "next/link";
 import styles from "../../styles/components/projects/Stacked.module.scss";
 import utilStyles from "../../styles/utils.module.scss";
 import { ButtonInterface, ImageInterface } from "../../types";
-import { IconEye } from "../icons";
+import { IconEye, IconFlower } from "../icons";
 
 interface StackedProjectInterface {
   button: ButtonInterface;
   image: ImageInterface;
   title: string;
   category: string;
+  flower: Boolean;
 }
 
 export const StackedProject = ({
@@ -18,9 +19,15 @@ export const StackedProject = ({
   image,
   title,
   category,
+  flower,
 }: StackedProjectInterface) => {
   return (
     <figure className={styles.wrapper}>
+      {flower && (
+        <div className={styles.flower}>
+          <IconFlower color="var(--pink)" />
+        </div>
+      )}
       <div className={styles.image}>
         <Link href={button.href}>
           <a className={styles.imageInner}>

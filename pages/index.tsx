@@ -20,6 +20,7 @@ import {
   featuredProjectResolver,
 } from "../services/resolvers";
 import { homepageInterface } from "../types/homepage";
+import { IconFlower } from "../components/icons";
 
 export const getStaticProps = async () => {
   const data = require("../lib/projects/data.json");
@@ -39,13 +40,14 @@ export const getStaticProps = async () => {
 };
 
 const Home: NextPage<homepageInterface> = ({ homepageData }) => {
+  const { featuredProject, carousel } = homepageData;
+
   return (
     <>
       <Meta />
-
       <Navigation />
 
-      <main>
+      <main style={{ overflow: "hidden" }}>
         <Container>
           <section className={classnames(utilStyles.grid, styles.hero)}>
             <Hero
@@ -55,31 +57,33 @@ const Home: NextPage<homepageInterface> = ({ homepageData }) => {
                 experience on a variety of brand, print &amp; digital projects."
             />
             <TiledProject
-              images={homepageData.featuredProject.images.map((image) => image)}
+              images={featuredProject.images.map((image) => image)}
               button={{
                 text: "Check It Out",
-                href: `/projects/${homepageData.featuredProject.slug}`,
+                href: `/projects/${featuredProject.slug}`,
               }}
             />
           </section>
+          <div className={styles.heroFlower}>
+            <IconFlower />
+          </div>
         </Container>
         <Section background="gradient" title="Recent Work" id="projects">
           <Carousel
             items={[
-              homepageData.carousel.map(
-                (project: carouselItemInterface, index: number) => (
-                  <StackedProject
-                    key={index}
-                    image={project.image}
-                    category={project.category}
-                    title={project.title}
-                    button={{
-                      href: `/projects/${project.slug}`,
-                      text: "View project",
-                    }}
-                  />
-                )
-              ),
+              carousel.map((project: carouselItemInterface, index: number) => (
+                <StackedProject
+                  key={index}
+                  flower={index === 0}
+                  image={project.image}
+                  category={project.category}
+                  title={project.title}
+                  button={{
+                    href: `/projects/${project.slug}`,
+                    text: "View project",
+                  }}
+                />
+              )),
             ]}
           />
         </Section>

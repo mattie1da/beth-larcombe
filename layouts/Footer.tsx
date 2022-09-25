@@ -12,16 +12,18 @@ export const Footer = forwardRef((props, ref) => {
   const beeRef = useRef(null);
 
   useEffect(() => {
-    gsap.to(beeRef.current, {
-      y: -60,
-      scrollTrigger: {
-        // @ts-ignore
-        trigger: ref.current,
-        start: "-30%",
-        end: "-20%",
-        scrub: true,
-      },
-    });
+    if (ref) {
+      gsap.to(beeRef.current, {
+        y: -60,
+        scrollTrigger: {
+          // @ts-ignore
+          trigger: ref.current,
+          start: "-30%",
+          end: "-20%",
+          scrub: true,
+        },
+      });
+    }
   }, [ref]);
   return (
     // @ts-ignore

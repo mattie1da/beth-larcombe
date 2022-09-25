@@ -1,4 +1,5 @@
 @import "../mixins";
+@import "../animations";
 
 $desktopNavSpacing: 2.5rem;
 
@@ -71,7 +72,26 @@ $desktopNavSpacing: 2.5rem;
   justify-content: space-between;
 }
 
+@keyframes wiggle {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-7deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+}
+
 .icon {
+  animation: 10s wiggle 2s infinite;
   max-width: 3rem;
   transition: max-width 0.25s ease-in-out;
 }
@@ -101,6 +121,34 @@ $desktopNavSpacing: 2.5rem;
   }
 
   display: block;
+}
+
+@keyframes grow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.active {
+  &:after {
+    animation: gradient var(--animationGradient), grow 0.5s forwards;
+    background: linear-gradient(
+      to right,
+      var(--teal),
+      var(--green),
+      var(--lavender),
+      var(--pink)
+    );
+    background-size: 250% 250%;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    bottom: -0.25rem;
+  }
 }
 
 .button {

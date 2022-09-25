@@ -1,6 +1,6 @@
 import { Container } from "./";
 import utilStyles from "../styles/utils.module.scss";
-import { ReactNode, useEffect, useRef } from "react";
+import { forwardRef, ReactNode, useEffect } from "react";
 import classnames from "classnames";
 import styles from "../styles/layouts/Section.module.scss";
 import { gsap } from "gsap";
@@ -17,82 +17,91 @@ interface SectionInterface {
   id?: string;
 }
 
-export const Section = ({
-  background,
-  bleed,
-  center,
-  children,
-  contain,
-  title,
-  variant,
-  id,
-}: SectionInterface) => {
-  const sectionRef = useRef(null);
+/* eslint-disable react/display-name */
+export const Section = forwardRef(
+  (
+    {
+      background,
+      bleed,
+      center,
+      children,
+      contain,
+      title,
+      variant,
+      id,
+    }: SectionInterface,
+    ref
+  ) => {
+    useEffect(() => {
+      if (background === "gradient") {
+        // @ts-ignore
+        gsap.to(ref.current, {
+          scrollTrigger: {
+            scrub: true,
+            // @ts-ignore
+            trigger: ref.current,
+          },
+          backgroundPosition: "0% 100%",
+        });
+      }
+    }, [background, ref]);
 
-  useEffect(() => {
-    if (background === "gradient") {
-      gsap.to(sectionRef.current, {
-        scrollTrigger: {
-          scrub: true,
-          trigger: sectionRef.current,
-        },
-        backgroundPosition: "0% 100%",
-      });
-    }
-  }, [background]);
-
-  return (
-    <section
-      id={id}
-      ref={sectionRef}
-      className={classnames(styles.section, {
-        [styles.gradient]: background === "gradient",
-        [styles.lavender]: background === "lavender",
-        [styles.about]: variant === "about",
-        [styles.footer]: variant === "footer",
-        [styles.center]: center,
-      })}
-    >
-      {contain ? (
-        <Container>
-          <div className={variant === "about" ? styles.aboutGrid : ""}>
+    return (
+      <section
+        id={id}
+        // @ts-ignore
+        ref={ref}
+        className={classnames(styles.section, {
+          [styles.gradient]: background === "gradient",
+          [styles.lavender]: background === "lavender",
+          [styles.about]: variant === "about",
+          [styles.footer]: variant === "footer",
+          [styles.center]: center,
+        })}
+      >
+        {contain ? (
+          <Container>
+            <div className={variant === "about" ? styles.aboutGrid : ""}>
+              {title && (
+                <h2 className={classnames(styles.title, utilStyles.heading2)}>
+                  {title}
+                </h2>
+              )}
+              {children}
+            </div>
+            {variant === "about" && (
+              <>
+                <div
+                  className={classnames(styles.flower, styles.flowerLavender)}
+                >
+                  <IconFlower />
+                </div>
+                <div className={classnames(styles.flower, styles.flowerPink)}>
+                  <IconFlower color="var(--pink)" />
+                </div>
+                <div className={classnames(styles.flower, styles.flowerTeal)}>
+                  <IconFlower color="var(--teal)" />
+                </div>
+              </>
+            )}
+          </Container>
+        ) : (
+          <div className={classnames({ [styles.wrapper]: !bleed })}>
             {title && (
-              <h2 className={classnames(styles.title, utilStyles.heading2)}>
+              <h2
+                className={classnames(
+                  styles.padLeft,
+                  styles.title,
+                  utilStyles.heading2
+                )}
+              >
                 {title}
               </h2>
             )}
             {children}
           </div>
-          {variant === "about" && (
-            <>
-              <div className={classnames(styles.flower, styles.flowerLavender)}>
-                <IconFlower />
-              </div>
-              <div className={classnames(styles.flower, styles.flowerPink)}>
-                <IconFlower color="var(--pink)" />
-              </div>
-              <div className={classnames(styles.flower, styles.flowerTeal)}>
-                <IconFlower color="var(--teal)" />
-              </div>
-            </>
-          )}
-        </Container>
-      ) : (
-        <div className={classnames({ [styles.wrapper]: !bleed })}>
-          {title && (
-            <h2
-              className={classnames(
-                styles.padLeft,
-                styles.title,
-                utilStyles.heading2
-              )}
-            >
-              {title}
-            </h2>
-          )}
-          {children}
-        </div>
-      )}
-    </section>
-  );
-};
+        )}
+      </section>
+    );
+  }
+);

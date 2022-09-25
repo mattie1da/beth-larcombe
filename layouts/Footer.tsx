@@ -4,10 +4,28 @@ import { IconBee } from "../components/icons";
 import utilStyles from "../styles/utils.module.scss";
 import styles from "../styles/layouts/Footer.module.scss";
 import { Section } from "./";
+import { forwardRef, useEffect, useRef } from "react";
+import gsap from "gsap";
 
-export const Footer = () => {
+/* eslint-disable react/display-name */
+export const Footer = forwardRef((props, ref) => {
+  const beeRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to(beeRef.current, {
+      y: -60,
+      scrollTrigger: {
+        // @ts-ignore
+        trigger: ref.current,
+        start: "-30%",
+        end: "-20%",
+        scrub: true,
+      },
+    });
+  }, [ref]);
   return (
-    <footer className={styles.wrapper} id="contact">
+    // @ts-ignore
+    <footer ref={ref} className={styles.wrapper} id="contact">
       <Section variant="footer" contain center background="lavender">
         <h2 className={classnames(utilStyles.heading2, styles.title)}>
           Like what you see?
@@ -26,7 +44,7 @@ export const Footer = () => {
               mattie.world
             </a>
           </p>
-          <div className={styles.bee}>
+          <div ref={beeRef} className={styles.bee}>
             <IconBee />
           </div>
           <a href="#">Back to the top &uarr;</a>
@@ -34,4 +52,4 @@ export const Footer = () => {
       </Section>
     </footer>
   );
-};
+});

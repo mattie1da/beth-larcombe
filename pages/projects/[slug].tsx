@@ -53,8 +53,8 @@ const ProjectPage = ({ project, breadcrumbs }: ProjectPageInterface) => {
   return (
     <>
       <Meta title={`Beth Larcombe - ${hero.title}`} />
+      {/* @ts-ignore */}
       <Navigation />
-
       <main className={styles.main}>
         <div className={styles.navFlowerWrapper}>
           <div className={styles.navFlower}>
@@ -70,7 +70,6 @@ const ProjectPage = ({ project, breadcrumbs }: ProjectPageInterface) => {
           navigation={breadcrumbs}
         />
       </main>
-
       <Footer />
     </>
   );

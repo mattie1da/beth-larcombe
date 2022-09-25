@@ -7,6 +7,11 @@ const nextConfig = {
     domains: ["localhost"],
   },
 
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
+
   async redirects() {
     return [
       {

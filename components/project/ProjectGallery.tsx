@@ -47,6 +47,7 @@ export const ProjectGallery = (props: ProjectGalleryInterface) => {
         className={classnames(styles.grid, styles.gridTwo)}
       >
         {images.slice(0, 4).map((image: ImageInterface, index: number) => (
+          // @ts-ignore
           <div ref={(el) => (galleryItems.current[index] = el)} key={index}>
             {index === 1 ? (
               <>

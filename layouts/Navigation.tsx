@@ -5,8 +5,10 @@ import { IconBee, IconClose, IconFlower, IconOpen } from "../components/icons";
 import utilStyles from "../styles/utils.module.scss";
 import styles from "../styles/layouts/Navigation.module.scss";
 import { Container } from "./Container";
+import { NAVIGATION_CONSTANTS } from "../lib/constants/navigation";
 
-export const Navigation = () => {
+// @ts-ignore
+export const Navigation = ({ activeSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -51,7 +53,7 @@ export const Navigation = () => {
             })}
           >
             <Link href="/">
-              <a className={styles.icon}>
+              <a className={styles.icon} aria-label="Go to homepage">
                 <IconBee />
               </a>
             </Link>
@@ -64,32 +66,41 @@ export const Navigation = () => {
             {(menuOpen || !isMobile) && (
               <ul className={styles.list}>
                 <li>
-                  <Link href="/#projects">
+                  <Link href={NAVIGATION_CONSTANTS.projects.href}>
                     <a
                       onClick={() => setMenuOpen(false)}
-                      className={styles.link}
+                      className={classnames(styles.link, {
+                        [styles.active]:
+                          NAVIGATION_CONSTANTS.projects.name === activeSection,
+                      })}
                     >
-                      Projects
+                      {NAVIGATION_CONSTANTS.projects.name}
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#about">
+                  <Link href={NAVIGATION_CONSTANTS.about.href}>
                     <a
                       onClick={() => setMenuOpen(false)}
-                      className={styles.link}
+                      className={classnames(styles.link, {
+                        [styles.active]:
+                          NAVIGATION_CONSTANTS.about.name === activeSection,
+                      })}
                     >
-                      About
+                      {NAVIGATION_CONSTANTS.about.name}
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#contact">
+                  <Link href={NAVIGATION_CONSTANTS.contact.href}>
                     <a
                       onClick={() => setMenuOpen(false)}
-                      className={styles.link}
+                      className={classnames(styles.link, {
+                        [styles.active]:
+                          NAVIGATION_CONSTANTS.contact.name === activeSection,
+                      })}
                     >
-                      Contact
+                      {NAVIGATION_CONSTANTS.contact.name}
                     </a>
                   </Link>
                 </li>

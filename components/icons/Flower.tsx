@@ -1,4 +1,10 @@
+import { useEffect, useRef } from "react";
 import styles from "../../styles/components/icons/Flower.module.scss";
+import { flowerAnimation } from "../animations/Flower";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 interface IconFlowerInterface {
   color?: string;
@@ -7,12 +13,23 @@ interface IconFlowerInterface {
 export const IconFlower = ({
   color = "var(--lavender)",
 }: IconFlowerInterface) => {
+  const flowerRef = useRef(null);
+
+  useEffect(() => {
+    flowerAnimation(flowerRef.current);
+
+    return () => {
+      ScrollTrigger.getAll().map((item) => item.kill());
+    };
+  }, []);
+
   return (
     <svg
       className={styles.icon}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 333 333"
+      ref={flowerRef}
     >
       <g stroke={color} strokeWidth="2">
         <path

@@ -3,14 +3,7 @@ import Head from "next/head";
 import classnames from "classnames";
 import { TiledProject } from "../components/projects";
 import { StackedProject } from "../components/projects/Stacked";
-import {
-  Navigation,
-  Container,
-  Hero,
-  Section,
-  Footer,
-  Meta,
-} from "../layouts/";
+import { Container, Hero, Layout, Section, Meta } from "../layouts/";
 import styles from "../styles/pages/Home.module.scss";
 import utilStyles from "../styles/utils.module.scss";
 import { carouselItemInterface, ProjectInterface } from "../types";
@@ -21,6 +14,8 @@ import {
 } from "../services/resolvers";
 import { homepageInterface } from "../types/homepage";
 import { IconFlower } from "../components/icons";
+import { useEffect, useRef, useState } from "react";
+import { carouselAnimation } from "../components/animations/Carousel";
 
 export const getStaticProps = async () => {
   const data = require("../lib/projects/data.json");
@@ -41,83 +36,152 @@ export const getStaticProps = async () => {
 
 const Home: NextPage<homepageInterface> = ({ homepageData }) => {
   const { featuredProject, carousel } = homepageData;
+  const carouselProjectsRef = useRef([]);
+
+  const [activeSection, setActiveSection] = useState(null);
+
+  const sectionProjectsRef = useRef(null);
+  const sectionAboutRef = useRef(null);
+  const sectionContactRef = useRef(null);
+
+  useEffect(() => {
+    carouselAnimation(carouselProjectsRef.current);
+  }, []);
+
+  useEffect(() => {
+    const sectionRefs = [
+      { section: "Projects", ref: sectionProjectsRef },
+      { section: "About", ref: sectionAboutRef },
+      { section: "Contact", ref: sectionContactRef },
+    ];
+
+    const navigationScroll = () => {
+      const recognitionOffset = 250;
+
+      // @ts-ignore
+      const sectionDistanceTop = (section) =>
+        section.offsetTop - recognitionOffset;
+
+      // @ts-ignore
+      const sectionDistanceBottom = (section) =>
+        section.offsetTop + section.offsetHeight - recognitionOffset;
+
+      // @ts-ignore
+      const sectionIsInView = (section) =>
+        scrollY > sectionDistanceTop(section) &&
+        scrollY < sectionDistanceBottom(section);
+
+      const activeRef = sectionRefs.find((section) =>
+        sectionIsInView(section.ref.current)
+      );
+
+      if (activeRef && activeSection !== activeRef.section) {
+        // @ts-ignore
+        setActiveSection(activeRef.section);
+      } else if (!activeRef && activeSection) {
+        setActiveSection(null);
+      }
+    };
+
+    window.addEventListener("scroll", navigationScroll);
+
+    return () => {
+      window.removeEventListener("scroll", navigationScroll);
+    };
+  }, [activeSection]);
 
   return (
     <>
       <Meta />
-      <Navigation />
-
-      <main style={{ overflow: "hidden" }}>
-        <Container>
-          <div className={styles.navFlower}>
-            <IconFlower />
-          </div>
-          <section className={classnames(utilStyles.grid, styles.hero)}>
-            <Hero
-              title="Beth Larcombe"
-              subTitle="Graphic Designer"
-              body="A multi-disciplined designer based in Southampton with over 6 years
-                experience on a variety of brand, print &amp; digital projects."
+      <Layout
+        activeSection={activeSection}
+        sectionContactRef={sectionContactRef}
+      >
+        <main style={{ overflow: "hidden" }}>
+          <Container>
+            <div className={styles.navFlower}>
+              <IconFlower />
+            </div>
+            <section className={classnames(utilStyles.grid, styles.hero)}>
+              <Hero
+                title="Beth Larcombe"
+                subTitle="Graphic Designer"
+                body="A multi-disciplined designer based in Southampton with over 6 years
+                  experience on a variety of brand, print &amp; digital projects."
+              />
+              <TiledProject
+                images={featuredProject.images.map((image) => image)}
+                button={{
+                  text: "Check It Out",
+                  href: `/projects/${featuredProject.slug}`,
+                }}
+              />
+            </section>
+            <div className={styles.heroFlower}>
+              <IconFlower />
+            </div>
+          </Container>
+          <Section
+            background="gradient"
+            title="Recent Work"
+            id="projects"
+            ref={sectionProjectsRef}
+          >
+            <Carousel
+              items={[
+                carousel.map(
+                  (project: carouselItemInterface, index: number) => (
+                    <div
+                      // @ts-ignore
+                      ref={(el) => (carouselProjectsRef.current[index] = el)}
+                      key={index}
+                    >
+                      <StackedProject
+                        // key={index}
+                        flower={index === 0}
+                        image={project.image}
+                        category={project.category}
+                        title={project.title}
+                        button={{
+                          href: `/projects/${project.slug}`,
+                          text: "View project",
+                        }}
+                      />
+                    </div>
+                  )
+                ),
+              ]}
             />
-            <TiledProject
-              images={featuredProject.images.map((image) => image)}
-              button={{
-                text: "Check It Out",
-                href: `/projects/${featuredProject.slug}`,
-              }}
-            />
-          </section>
-          <div className={styles.heroFlower}>
-            <IconFlower />
-          </div>
-        </Container>
-        <Section background="gradient" title="Recent Work" id="projects">
-          <Carousel
-            items={[
-              carousel.map((project: carouselItemInterface, index: number) => (
-                <StackedProject
-                  key={index}
-                  flower={index === 0}
-                  image={project.image}
-                  category={project.category}
-                  title={project.title}
-                  button={{
-                    href: `/projects/${project.slug}`,
-                    text: "View project",
-                  }}
-                />
-              )),
-            ]}
-          />
-        </Section>
-        <Section contain variant="about" id="about">
-          <div>
-            <h2 className={classnames(utilStyles.heading2, utilStyles.margin0)}>
-              Time flies
-            </h2>
-            <h3 className={utilStyles.heading3}>
-              Over 6 years of design adventures
-            </h3>
-          </div>
-          <div>
-            <p>
-              With experience in brand agencies, digital studios and in-house,
-              I’ve spent the last few years honing my craft. My absolutely
-              favourite projects to work on are brand creation, refreshes and
-              digital, but I have a whole heap of print experience to boot too.
-              Basically, whatever you need, I’ve got you covered.
-            </p>
-            <a
-              className={utilStyles.button}
-              href="https://www.linkedin.com/in/beth-larcombe-5200b6103"
-            >
-              Catch me on Linkedin
-            </a>
-          </div>
-        </Section>
-      </main>
-
-      <Footer />
+          </Section>
+          <Section contain variant="about" id="about" ref={sectionAboutRef}>
+            <div>
+              <h2
+                className={classnames(utilStyles.heading2, utilStyles.margin0)}
+              >
+                Time flies
+              </h2>
+              <h3 className={utilStyles.heading3}>
+                Over 6 years of design adventures
+              </h3>
+            </div>
+            <div>
+              <p>
+                With experience in brand agencies, digital studios and in-house,
+                I’ve spent the last few years honing my craft. My absolutely
+                favourite projects to work on are brand creation, refreshes and
+                digital, but I have a whole heap of print experience to boot
+                too. Basically, whatever you need, I’ve got you covered.
+              </p>
+              <a
+                className={utilStyles.button}
+                href="https://www.linkedin.com/in/beth-larcombe-5200b6103"
+              >
+                Catch me on Linkedin
+              </a>
+            </div>
+          </Section>
+        </main>
+      </Layout>
     </>
   );
 };

@@ -17,14 +17,34 @@
 
 .heroFlower {
   position: absolute;
-  bottom: -25rem;
-  right: -22rem;
-  width: 50rem;
+
+  @include phone() {
+    left: 100%;
+    width: 24rem;
+    transform: translateX(-50%) translateY(-50%);
+    top: 100%;
+    z-index: 1;
+  }
+
+  @include desktop() {
+    bottom: -25rem;
+    right: -22rem;
+    width: 50rem;
+  }
 }
 
 .navFlower {
   position: absolute;
-  right: -8rem;
-  top: -8rem;
-  width: 30rem;
+
+  @include desktop() {
+    right: -8rem;
+    top: -8rem;
+    width: 30rem;
+  }
+
+  @include phone() {
+    width: 15rem;
+    right: -6rem;
+    top: -6rem;
+  }
 }

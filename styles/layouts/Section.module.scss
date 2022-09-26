@@ -120,20 +120,42 @@
   position: absolute;
 
   &.flowerLavender {
-    top: 100%;
-    left: 0;
+    @include phone() {
+      left: -3rem;
+      width: 14rem;
+      bottom: -20rem;
+    }
+
+    @include desktop() {
+      top: 100%;
+      left: 0;
+    }
   }
 
   &.flowerPink {
-    bottom: -2rem;
-    left: 16rem;
-    max-width: 7rem;
+    @include phone() {
+      bottom: -11rem;
+      right: -2rem;
+      width: 10rem;
+    }
+
+    @include desktop() {
+      bottom: -2rem;
+      left: 16rem;
+      width: 7rem;
+    }
   }
 
   &.flowerTeal {
-    z-index: 1;
-    bottom: calc(100% - 7rem);
-    right: 7rem;
-    width: 23rem;
+    @include phone() {
+      display: none;
+    }
+
+    @include desktop() {
+      z-index: 1;
+      bottom: calc(100% - 7rem);
+      right: 7rem;
+      width: 23rem;
+    }
   }
 }

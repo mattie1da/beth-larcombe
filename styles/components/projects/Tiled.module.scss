@@ -15,9 +15,18 @@ $offset: 5rem;
 
 .flower {
   position: absolute;
-  left: -5rem;
-  top: 5rem;
-  width: 14rem;
+
+  @include phone() {
+    left: -1rem;
+    top: 4rem;
+    width: 10rem;
+  }
+
+  @include desktop() {
+    left: -5rem;
+    top: 5rem;
+    width: 14rem;
+  }
 }
 
 .image {

@@ -69,8 +69,14 @@
 }
 
 .flower {
-  position: absolute;
-  right: 30%;
-  bottom: -17rem;
-  width: 15rem;
+  @include phone() {
+    display: none;
+  }
+
+  @include desktop() {
+    position: absolute;
+    right: 30%;
+    bottom: -17rem;
+    width: 15rem;
+  }
 }

@@ -66,9 +66,15 @@ $captionOffsetY: 8rem;
 }
 
 .flower {
-  position: absolute;
-  top: -4rem;
-  right: -4rem;
-  max-width: 8rem;
-  z-index: 1;
+  @include phone() {
+    display: none;
+  }
+
+  @include desktop() {
+    position: absolute;
+    top: -4rem;
+    right: -4rem;
+    max-width: 8rem;
+    z-index: 1;
+  }
 }

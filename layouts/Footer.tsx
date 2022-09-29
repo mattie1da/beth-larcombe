@@ -4,27 +4,10 @@ import { IconBee } from "../components/icons";
 import utilStyles from "../styles/utils.module.scss";
 import styles from "../styles/layouts/Footer.module.scss";
 import { Section } from "./";
-import { forwardRef, useEffect, useRef } from "react";
-import gsap from "gsap";
+import { forwardRef } from "react";
 
 /* eslint-disable react/display-name */
 export const Footer = forwardRef((props, ref) => {
-  const beeRef = useRef(null);
-
-  useEffect(() => {
-    if (ref) {
-      gsap.to(beeRef.current, {
-        y: -60,
-        scrollTrigger: {
-          // @ts-ignore
-          trigger: ref.current,
-          start: "-30%",
-          end: "-20%",
-          scrub: true,
-        },
-      });
-    }
-  }, [ref]);
   return (
     // @ts-ignore
     <footer ref={ref} className={styles.wrapper} id="contact">
@@ -46,7 +29,7 @@ export const Footer = forwardRef((props, ref) => {
               mattie.world
             </a>
           </p>
-          <div ref={beeRef} className={styles.bee}>
+          <div className={styles.bee}>
             <IconBee />
           </div>
           <a href="#">Back to the top &uarr;</a>

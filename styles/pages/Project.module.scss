@@ -16,16 +16,11 @@
 
 .navFlower {
   position: absolute;
-  @include desktop() {
-    right: -8rem;
-    top: -8rem;
-    width: 30rem;
-  }
+  z-index: 1;
+  right: var(--gutter);
 
   @include phone() {
-    right: var(--gutter);
     top: calc(var(--roof) / 2);
     width: 10rem;
-    z-index: 1;
   }
 }

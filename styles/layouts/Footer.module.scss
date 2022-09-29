@@ -46,10 +46,10 @@
   max-width: 4rem;
 
   @include phone() {
-    bottom: -9.2rem;
+    bottom: -5.5rem;
   }
 
   @include desktop() {
-    bottom: -4.25rem;
+    bottom: -2rem;
   }
 }

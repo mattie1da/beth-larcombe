@@ -2,6 +2,8 @@
 @import "../animations";
 
 .section {
+  overflow: hidden;
+
   @include phone() {
     scroll-margin-top: calc(var(--roof) / 1.75); // offset anchor links
   }

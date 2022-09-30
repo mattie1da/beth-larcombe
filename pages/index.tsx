@@ -97,30 +97,32 @@ const Home: NextPage<homepageInterface> = ({ homepageData }) => {
         activeSection={activeSection}
         sectionContactRef={sectionContactRef}
       >
-        <main style={{ overflow: "hidden" }}>
-          <Container>
-            <div className={styles.navFlower}>
-              <IconFlower color="var(--teal)" />
-            </div>
-            <section className={classnames(utilStyles.grid, styles.hero)}>
-              <Hero
-                title="Beth Larcombe"
-                subTitle="Graphic Designer"
-                body="A multi-disciplined designer based in Southampton with over 6 years
-                  experience on a variety of brand, print &amp; digital projects."
-              />
-              <TiledProject
-                images={featuredProject.images.map((image) => image)}
-                button={{
-                  text: "Check It Out",
-                  href: `/projects/${featuredProject.slug}`,
-                }}
-              />
-            </section>
-            <div className={styles.heroFlower}>
-              <IconFlower />
-            </div>
-          </Container>
+        <main>
+          <div className={styles.homeHero}>
+            <Container>
+              <div className={styles.navFlower}>
+                <IconFlower color="var(--teal)" />
+              </div>
+              <section className={classnames(utilStyles.grid, styles.hero)}>
+                <Hero
+                  title="Beth Larcombe"
+                  subTitle="Graphic Designer"
+                  body="A multi-disciplined designer based in Southampton with over 6 years
+                    experience on a variety of brand, print &amp; digital projects."
+                />
+                <TiledProject
+                  images={featuredProject.images.map((image) => image)}
+                  button={{
+                    text: "Check It Out",
+                    href: `/projects/${featuredProject.slug}`,
+                  }}
+                />
+              </section>
+              <div className={styles.heroFlower}>
+                <IconFlower />
+              </div>
+            </Container>
+          </div>
           <Section
             background="gradient"
             title="Recent Work"
@@ -137,7 +139,6 @@ const Home: NextPage<homepageInterface> = ({ homepageData }) => {
                       key={index}
                     >
                       <StackedProject
-                        // key={index}
                         flower={index === 0}
                         image={project.image}
                         category={project.category}

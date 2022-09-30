@@ -1,5 +1,9 @@
 @import "../mixins";
 
+.homeHero {
+  overflow: hidden;
+}
+
 .hero {
   align-items: flex-end;
   padding-top: var(--roof);

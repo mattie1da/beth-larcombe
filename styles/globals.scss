@@ -1,5 +1,21 @@
 @import "./_mixins.scss";
 
+@font-face {
+  font-family: "Dela Gothic";
+  src: url("../assets/fonts/DelaGothicOne-Regular.ttf");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Forum";
+  src: url("../assets/fonts/Forum-Regular.ttf");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   /* fonts */
   --fontForum: "Forum", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -32,20 +48,6 @@
     --gutter: 5.7rem;
     --roof: 7rem;
   }
-}
-
-@font-face {
-  font-family: "Dela Gothic";
-  src: url("../assets/fonts/DelaGothicOne-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Forum";
-  src: url("../assets/fonts/Forum-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
 }
 
 html,

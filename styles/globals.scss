@@ -1,12 +1,12 @@
 @import "./_mixins.scss";
 
-// @font-face {
-//   font-family: "Dela Gothic";
-//   src: url("../assets/fonts/DelaGothicOne-Regular.ttf");
-//   font-display: swap;
-//   font-weight: 400;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("../assets/fonts/DelaGothicOne-Regular.woff2");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "Forum";
@@ -20,8 +20,9 @@
   /* fonts */
   --fontForum: "Forum", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --fontDelaGothic: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --fontDelaGothic: "Dela Gothic One", -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 
   /* colors */
   --black: #383838;

@@ -1,10 +1,12 @@
 import classnames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
+import { isVideo } from "../../helpers/isVideo";
 import styles from "../../styles/components/projects/Tiled.module.scss";
 import utilStyles from "../../styles/utils.module.scss";
 import { ButtonInterface, ImageInterface } from "../../types";
 import { IconFlower } from "../icons";
+import { Media } from "../Media";
 
 interface TiledProjectInterface {
   button: ButtonInterface;
@@ -18,22 +20,10 @@ export const TiledProject = ({ button, images }: TiledProjectInterface) => {
         <IconFlower color="var(--pink)" />
       </div>
       <div className={classnames(styles.image, styles.square)}>
-        <Image
-          src={images[0].src}
-          alt={images[0].alt}
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
+        <Media media={images[0]} />
       </div>
       <div className={classnames(styles.image, styles.large)}>
-        <Image
-          src={images[1].src}
-          alt={images[1].alt}
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
+        <Media media={images[1]} />
         <Link href={button.href}>
           <a className={classnames(styles.button, utilStyles.button)}>
             {button.text}

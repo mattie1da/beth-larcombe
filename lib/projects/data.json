@@ -3,7 +3,7 @@
     "id": 0,
     "meta": {
       "category": "Branding & Print",
-      "description": "A wicked project I did - this appears when googling or sharing the page on twitter, linkedin, fb etc..",
+      "description": "Brand concept for Willo Remedies, offering CBD products for mind, body and soul.",
       "slug": "willo-remedies",
       "colors": {
         "primary": "#006747",
@@ -19,7 +19,7 @@
       }
     },
     "intro": {
-      "description": "<p>Willo Remedies is a company focussed on providing customers with natural CBD remedies for the body and soul.</p><p>Tasked with creating a brand from the ground up this concept looked at the brand from the more natural angle with CBD serving as a secondary benefit. A logo colour palette and product packaging such as balms and tinctures was created alongside full brand guidelines and social media suggestions.</p>",
+      "description": "<p>Willo Remedies is a company focussed on providing customers with natural CBD remedies for the body and soul.</p><p>Tasked with creating a brand from the ground up, this concept took a more natural, holistic angle with CBD serving as a secondary benefit.</p><p>A logo, colour palette and product packaging such as balms and tinctures were created alongside full brand guidelines, social media and website suggestions.</p>",
       "list": [
         "Logo creation",
         "Packaging design",
@@ -31,31 +31,31 @@
     "images": [
       {
         "src": "/images/projects/willo-remedies/product-2.jpeg",
-        "alt": "Cute puppy"
+        "alt": "Willo Remedies tincture bottle"
       },
       {
         "src": "/images/projects/willo-remedies/product-3.jpeg",
-        "alt": "Cute puppy"
+        "alt": "Willo Remedies tincture packaging"
       },
       {
         "src": "/images/projects/willo-remedies/desktop.jpeg",
-        "alt": "Cute puppy"
+        "alt": "Willo Remedies website design concept"
       },
       {
         "src": "/images/projects/willo-remedies/logo.jpeg",
-        "alt": "Cute puppy"
+        "alt": "Willo Remedies logo concept"
       },
       {
         "src": "/images/projects/willo-remedies/product-2.jpeg",
-        "alt": "Cute puppy"
+        "alt": "Placeholder"
       },
       {
         "src": "/images/projects/willo-remedies/desktop.jpeg",
-        "alt": "Cute puppy"
+        "alt": "Placeholder"
       },
       {
         "src": "/images/projects/willo-remedies/desktop.jpeg",
-        "alt": "Cute puppy"
+        "alt": "Placeholder"
       }
     ]
   },
@@ -63,7 +63,7 @@
     "id": 1,
     "meta": {
       "category": "Brand & Digital",
-      "description": "A wicked project I did - this appears when googling or sharing the page on twitter, linkedin, fb etc..",
+      "description": "Brand concept for Tinkr, an AI powered career app.",
       "slug": "tinkr",
       "colors": {
         "primary": "#201B45",
@@ -75,47 +75,46 @@
       "subTitle": "Brand & Digital",
       "image": {
         "src": "/images/projects/tinkr/mobile.jpeg",
-        "alt": "Tinkr - Products"
+        "alt": "Tinkr mobile app designs"
       }
     },
     "intro": {
-      "description": "<p>Tinkr is an up and coming app powered by artificial intelligence. Positioned as your own personal mentor in app form, it parses user's CVs and utilises data from other users to provide insight into your career.</p><p>The entire app needed branding from the ground up. This included logos, visual systems, messaging, app designs, brand guidelines and more.</p><p>These concepts focussed on different aspects of the brand; firstly, the individuality of each user and their journey. Secondly, the personable aspect of the app and it's mentor-like status.</p>",
+      "description": "<p>Tinkr is an up and coming app powered by artificial intelligence. Positioned as your own personal mentor in app form, it parses user's CVs and utilises data from other users to provide insight into your career.</p><p>As a start-up, Tinkr needed fresh branding which would help them stand out from their competitors. This included logo, visual system, messaging, app designs, brand guidelines and more.</p><p>This concept focussed on different aspects of the brand; firstly, the individuality of each user and their journey. Secondly, the personable aspect of the app and it's mentor-like status. These inspired the finger-print like patterns, always hinting at the unique nature of both the users and the app itself.</p>",
       "list": [
         "App Concepts",
         "Logo Concept",
         "Desktop Concept",
-        "Social Post Concept",
-        "3D Space Concept"
+        "Social Post Concept"
       ]
     },
     "images": [
       {
         "src": "/images/projects/tinkr/logo.jpeg",
-        "alt": "Tinkr - Products"
+        "alt": "Tinkr logo concept"
       },
       {
         "src": "/images/projects/tinkr/desktop.jpeg",
-        "alt": "Tinkr - Products"
+        "alt": "Tinkr website design concept"
       },
       {
         "src": "/images/projects/tinkr/social-post.jpeg",
-        "alt": "Tinkr - Products"
+        "alt": "Tinkr social post concepts"
       },
       {
         "src": "/images/projects/tinkr/desktop.jpeg",
-        "alt": "Tinkr - Products"
+        "alt": "Tinkr website design concept"
       },
       {
         "src": "/images/projects/tinkr/3d-space-concept.jpeg",
-        "alt": "Tinkr - Products"
+        "alt": "Tinkr 3D example concept"
       },
       {
         "src": "/images/projects/tinkr/mobile.jpeg",
-        "alt": "Tinkr - Products"
+        "alt": "Tinkr mobile design concept"
       },
       {
         "src": "/images/projects/tinkr/mobile.jpeg",
-        "alt": "Tinkr - Products"
+        "alt": "Tinkr mobile design concept"
       }
     ]
   },
@@ -123,7 +122,7 @@
     "id": 2,
     "meta": {
       "category": "Branding & Print",
-      "description": "A wicked project I did - this appears when googling or sharing the page on twitter, linkedin, fb etc..",
+      "description": "Brand project for The Blend Academy, a gin mixing experience in the heart of Winchester.",
       "slug": "the-blend-academy",
       "colors": {
         "primary": "#093D43",
@@ -135,7 +134,7 @@
       "subTitle": "Branding & Print",
       "image": {
         "src": "/images/projects/blend-academy/gin.jpeg",
-        "alt": "Blend Academy - Products"
+        "alt": "The Blend Academy personalised gin bottle design"
       }
     },
     "intro": {
@@ -143,40 +142,40 @@
       "list": [
         "Logo Design",
         "Launch Leaflets",
-        "Launch Illustrations",
         "Golden Tickets",
         "Bottle Stickers",
-        "Ingredient Illustrations"
+        "Ingredient Illustrations",
+        "Interior Design"
       ]
     },
     "images": [
       {
         "src": "/images/projects/blend-academy/gifs/logos.mp4",
-        "alt": "Blend Academy - Products"
+        "alt": "The Blend Academy logo in various colours"
       },
       {
         "src": "/images/projects/blend-academy/print.jpeg",
-        "alt": "Blend Academy - Products"
+        "alt": "The Blend Academy launch leaflets"
       },
       {
         "src": "/images/projects/blend-academy/festive-illustrations.jpeg",
-        "alt": "Blend Academy - Products"
+        "alt": "The Blend Academy illustration examples"
       },
       {
         "src": "/images/projects/blend-academy/gifs/logos.gif",
-        "alt": "Blend Academy - Products"
+        "alt": "The Blend Academy logo in various colours"
       },
       {
         "src": "/images/projects/blend-academy/golden-ticket.jpeg",
-        "alt": "Blend Academy - Products"
+        "alt": "The Blend Academy golden ticket"
       },
       {
         "src": "/images/projects/blend-academy/gin.jpeg",
-        "alt": "Blend Academy - Products"
+        "alt": "The Blend Academy personalised bottle label"
       },
       {
         "src": "/images/projects/blend-academy/gin.jpeg",
-        "alt": "Blend Academy - Products"
+        "alt": "The Blend Academy personalised bottle label"
       }
     ]
   },
@@ -184,7 +183,7 @@
     "id": 3,
     "meta": {
       "category": "Brand & Digital",
-      "description": "A wicked project I did - this appears when googling or sharing the page on twitter, linkedin, fb etc..",
+      "description": "Brand concept for Trade House Media, an online advertising agency.",
       "slug": "trade-house-media",
       "colors": {
         "primary": "#0D68F8",
@@ -196,47 +195,46 @@
       "subTitle": "Brand & Digital",
       "image": {
         "src": "/images/projects/trade-house-media/logo.jpeg",
-        "alt": "Trade House Media - Products"
+        "alt": "Trade House Media logo concept"
       }
     },
     "intro": {
-      "description": "<p>THM are an onine advertising agency who wanted a new look to help them stand out from the crowd.</p><p>I created a concept that looked at the digital aspect of their work but in an old-fashioned way, just like the traditional take they use with their clients. This led me to an 8-bit style with a bold, modern colour palette.</p><p>Utilising people-focussed photography, the brand had a fun, human edge that connected with clients and helped THM show they have a more personal touch.</p>",
+      "description": "<p>THM are an online advertising agency who wanted a new look to help them stand out from the crowd.</p><p>I created a concept that looked at the digital aspect of their work but in an old-fashioned way, just like the traditional, people-first approach they take with their clients. This led me to an 8-bit style with a bold, modern colour palette to create cut-through against competitors.</p><p>Utilising people-focussed photography, the brand had a fun, human edge that connected with clients and helped THM show they have a more personal touch.</p>",
       "list": [
-        "App Concepts",
         "Logo Concept",
-        "Desktop Concept",
-        "Social Post Concept",
-        "3D Space Concept"
+        "Responsive Website Concept",
+        "Social Post Concepts",
+        "Presentation Concept"
       ]
     },
     "images": [
       {
         "src": "/images/projects/trade-house-media/desktop.jpeg",
-        "alt": "Trade House Media - Products"
+        "alt": "Trade House Media desktop website design concept"
       },
       {
         "src": "/images/projects/trade-house-media/mobile.jpeg",
-        "alt": "Trade House Media - Products"
+        "alt": "Trade House Media mobile website design concept"
       },
       {
         "src": "/images/projects/trade-house-media/social-post.jpeg",
-        "alt": "Trade House Media - Products"
+        "alt": "Trade House Media social post concept"
       },
       {
         "src": "/images/projects/trade-house-media/social-post-2.jpeg",
-        "alt": "Trade House Media - Products"
+        "alt": "Trade House Media social post concept"
       },
       {
         "src": "/images/projects/trade-house-media/logo.jpeg",
-        "alt": "Trade House Media - Products"
+        "alt": "Trade House Media logo concept"
       },
       {
         "src": "/images/projects/trade-house-media/desktop.jpeg",
-        "alt": "Trade House Media - Products"
+        "alt": "Trade House Media desktop website design concept"
       },
       {
         "src": "/images/projects/trade-house-media/mobile.jpeg",
-        "alt": "Trade House Media - Products"
+        "alt": "Trade House Media mobile website design concept"
       }
     ]
   }

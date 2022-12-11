@@ -12,6 +12,7 @@ export interface ProjectInterface {
   hero: HeroInterface;
   intro: ProjectIntroInterface;
   images: ImageInterface[];
+  gif?: ImageInterface;
   navigation: BreadcrumbsInterface;
 }
 

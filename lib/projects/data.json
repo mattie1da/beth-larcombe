@@ -14,8 +14,8 @@
       "title": "Willo Remedies",
       "subTitle": "Branding & Print",
       "image": {
-        "src": "/images/projects/willo-remedies/product.jpeg",
-        "alt": "Willo Remedies - Products"
+        "src": "/images/projects/willo-remedies/WilloHeader.jpg",
+        "alt": "Willo Remedies brand pattern"
       }
     },
     "intro": {
@@ -25,37 +25,38 @@
         "Packaging design",
         "Brand guidelines",
         "Social media design",
-        "Website design"
+        "Website design",
+        "Visual system"
       ]
     },
     "images": [
       {
-        "src": "/images/projects/willo-remedies/product-2.jpeg",
-        "alt": "Willo Remedies tincture bottle"
+        "src": "/images/projects/willo-remedies/WilloLarge-1.jpg",
+        "alt": "Willo balm box concept"
       },
       {
-        "src": "/images/projects/willo-remedies/product-3.jpeg",
-        "alt": "Willo Remedies tincture packaging"
+        "src": "/images/projects/willo-remedies/WilloSmall-1.jpg",
+        "alt": "Willo logo concept"
       },
       {
-        "src": "/images/projects/willo-remedies/desktop.jpeg",
-        "alt": "Willo Remedies website design concept"
+        "src": "/images/projects/willo-remedies/WilloLarge-2.jpg",
+        "alt": "Willo website design concept"
       },
       {
-        "src": "/images/projects/willo-remedies/logo.jpeg",
-        "alt": "Willo Remedies logo concept"
+        "src": "/images/projects/willo-remedies/WilloLarge-3.jpg",
+        "alt": "Willo tincture boxes"
       },
       {
-        "src": "/images/projects/willo-remedies/product-2.jpeg",
-        "alt": "Placeholder"
+        "src": "/images/projects/willo-remedies/WilloSmall-2.jpg",
+        "alt": "Willo visual idea"
       },
       {
-        "src": "/images/projects/willo-remedies/desktop.jpeg",
-        "alt": "Placeholder"
+        "src": "/images/projects/willo-remedies/WilloSmall-3.jpg",
+        "alt": "Willo tincture bottle design"
       },
       {
-        "src": "/images/projects/willo-remedies/desktop.jpeg",
-        "alt": "Placeholder"
+        "src": "/images/projects/willo-remedies/WilloSmall-4.jpg",
+        "alt": "Willo mobile web design"
       }
     ]
   },
@@ -74,47 +75,48 @@
       "title": "Tinkr",
       "subTitle": "Brand & Digital",
       "image": {
-        "src": "/images/projects/tinkr/mobile.jpeg",
-        "alt": "Tinkr mobile app designs"
+        "src": "/images/projects/tinkr/TinkrHeader.jpg",
+        "alt": "Tinkr brand pattern"
       }
     },
     "intro": {
       "description": "<p>Tinkr is an up and coming app powered by artificial intelligence. Positioned as your own personal mentor in app form, it parses user's CVs and utilises data from other users to provide insight into your career.</p><p>As a start-up, Tinkr needed fresh branding which would help them stand out from their competitors. This included logo, visual system, messaging, app designs, brand guidelines and more.</p><p>This concept focussed on different aspects of the brand; firstly, the individuality of each user and their journey. Secondly, the personable aspect of the app and it's mentor-like status. These inspired the finger-print like patterns, always hinting at the unique nature of both the users and the app itself.</p>",
       "list": [
-        "App Concepts",
-        "Logo Concept",
-        "Desktop Concept",
-        "Social Post Concept"
+        "App concepts",
+        "Logo concept",
+        "Responsive website concept",
+        "Social post concepts",
+        "Visual system"
       ]
     },
     "images": [
       {
-        "src": "/images/projects/tinkr/logo.jpeg",
+        "src": "/images/projects/tinkr/TinkrLarge-1.jpg",
+        "alt": "Tinkr app and icon designs"
+      },
+      {
+        "src": "/images/projects/tinkr/TinkrSmall-1.jpg",
         "alt": "Tinkr logo concept"
       },
       {
-        "src": "/images/projects/tinkr/desktop.jpeg",
-        "alt": "Tinkr website design concept"
-      },
-      {
-        "src": "/images/projects/tinkr/social-post.jpeg",
+        "src": "/images/projects/tinkr/TinkrLarge-2.jpg",
         "alt": "Tinkr social post concepts"
       },
       {
-        "src": "/images/projects/tinkr/desktop.jpeg",
-        "alt": "Tinkr website design concept"
+        "src": "/images/projects/tinkr/TinkrLarge-3.jpg",
+        "alt": "Tinkr desktop website design"
       },
       {
-        "src": "/images/projects/tinkr/3d-space-concept.jpeg",
-        "alt": "Tinkr 3D example concept"
+        "src": "/images/projects/tinkr/TinkrSmall-2.jpg",
+        "alt": "Tinkr visual idea, white"
       },
       {
-        "src": "/images/projects/tinkr/mobile.jpeg",
-        "alt": "Tinkr mobile design concept"
+        "src": "/images/projects/tinkr/TinkrSmall-3.jpg",
+        "alt": "Tinkr 3D data visualisation idea"
       },
       {
-        "src": "/images/projects/tinkr/mobile.jpeg",
-        "alt": "Tinkr mobile design concept"
+        "src": "/images/projects/tinkr/TinkrSmall-4.jpg",
+        "alt": "Tinkr visual idea, navy"
       }
     ]
   },
@@ -133,48 +135,52 @@
       "title": "The Blend Academy",
       "subTitle": "Branding & Print",
       "image": {
-        "src": "/images/projects/blend-academy/gin.jpeg",
-        "alt": "The Blend Academy personalised gin bottle design"
+        "src": "/images/projects/blend-academy/Blend-AcademyHeader.jpg",
+        "alt": "The Blend Academy brand pattern"
       }
     },
     "intro": {
       "description": "<p>The Winchester Distillery wanted to craft a new gin experience in the heart of Winchester with a bold new brand to boot.</p><p>After helping to choose a catchy name for the experience, I then had the pleasure of creating the logo, brand guidelines and illustrations for The Blend Academy, along with numerous pieces of printed collateral and interior design suggestions for the space.</p><p>This included print advertisements as well as window vinyls, bottle stickers, golden tickets, postcards and pull up banners to be used at events.</p>",
       "list": [
-        "Logo Design",
-        "Launch Leaflets",
-        "Golden Tickets",
-        "Bottle Stickers",
-        "Ingredient Illustrations",
-        "Interior Design"
+        "Logo design",
+        "Launch leaflets",
+        "Golden tickets",
+        "Bottle stickers",
+        "Ingredient illustrations",
+        "Interior design"
       ]
+    },
+    "gif": {
+      "src": "/images/projects/blend-academy/gifs/logos.gif",
+      "alt": "The Blend Academy logo in various colour combinations"
     },
     "images": [
       {
-        "src": "/images/projects/blend-academy/gifs/logos.mp4",
-        "alt": "The Blend Academy logo in various colours"
+        "src": "/images/projects/blend-academy/Blend-AcademyLarge-1.jpg",
+        "alt": "The Blend Academy bottle render"
       },
       {
-        "src": "/images/projects/blend-academy/print.jpeg",
+        "src": "/images/projects/blend-academy/Blend-AcademySmall-1.jpg",
+        "alt": "The Blend Academy logo"
+      },
+      {
+        "src": "/images/projects/blend-academy/Blend-AcademyLarge-2.jpg",
         "alt": "The Blend Academy launch leaflets"
       },
       {
-        "src": "/images/projects/blend-academy/festive-illustrations.jpeg",
+        "src": "/images/projects/blend-academy/Blend-AcademyLarge-3.jpg",
+        "alt": "The Blend Academy brand guidelines"
+      },
+      {
+        "src": "/images/projects/blend-academy/Blend-AcademySmall-2.jpg",
         "alt": "The Blend Academy illustration examples"
       },
       {
-        "src": "/images/projects/blend-academy/gifs/logos.gif",
-        "alt": "The Blend Academy logo in various colours"
-      },
-      {
-        "src": "/images/projects/blend-academy/golden-ticket.jpeg",
+        "src": "/images/projects/blend-academy/Blend-AcademySmall-3.jpg",
         "alt": "The Blend Academy golden ticket"
       },
       {
-        "src": "/images/projects/blend-academy/gin.jpeg",
-        "alt": "The Blend Academy personalised bottle label"
-      },
-      {
-        "src": "/images/projects/blend-academy/gin.jpeg",
+        "src": "/images/projects/blend-academy/Blend-AcademySmall-4.jpg",
         "alt": "The Blend Academy personalised bottle label"
       }
     ]
@@ -194,47 +200,108 @@
       "title": "Trade House Media",
       "subTitle": "Brand & Digital",
       "image": {
-        "src": "/images/projects/trade-house-media/logo.jpeg",
-        "alt": "Trade House Media logo concept"
+        "src": "/images/projects/trade-house-media/THMHeader.jpg",
+        "alt": "Trade House Media brand pattern"
       }
     },
     "intro": {
       "description": "<p>THM are an online advertising agency who wanted a new look to help them stand out from the crowd.</p><p>I created a concept that looked at the digital aspect of their work but in an old-fashioned way, just like the traditional, people-first approach they take with their clients. This led me to an 8-bit style with a bold, modern colour palette to create cut-through against competitors.</p><p>Utilising people-focussed photography, the brand had a fun, human edge that connected with clients and helped THM show they have a more personal touch.</p>",
       "list": [
-        "Logo Concept",
-        "Responsive Website Concept",
-        "Social Post Concepts",
-        "Presentation Concept"
+        "Logo concept",
+        "Responsive website concept",
+        "Social post concepts",
+        "Presentation concept",
+        "Visual system"
       ]
     },
     "images": [
       {
-        "src": "/images/projects/trade-house-media/desktop.jpeg",
+        "src": "/images/projects/trade-house-media/THMLarge-1.jpg",
         "alt": "Trade House Media desktop website design concept"
       },
       {
-        "src": "/images/projects/trade-house-media/mobile.jpeg",
-        "alt": "Trade House Media mobile website design concept"
-      },
-      {
-        "src": "/images/projects/trade-house-media/social-post.jpeg",
-        "alt": "Trade House Media social post concept"
-      },
-      {
-        "src": "/images/projects/trade-house-media/social-post-2.jpeg",
-        "alt": "Trade House Media social post concept"
-      },
-      {
-        "src": "/images/projects/trade-house-media/logo.jpeg",
+        "src": "/images/projects/trade-house-media/THMSmall-1.jpg",
         "alt": "Trade House Media logo concept"
       },
       {
-        "src": "/images/projects/trade-house-media/desktop.jpeg",
-        "alt": "Trade House Media desktop website design concept"
+        "src": "/images/projects/trade-house-media/THMLarge-2.jpg",
+        "alt": "Trade House Media large icon examples"
       },
       {
-        "src": "/images/projects/trade-house-media/mobile.jpeg",
-        "alt": "Trade House Media mobile website design concept"
+        "src": "/images/projects/trade-house-media/THMLarge-3.jpg",
+        "alt": "Trade House Media social post concepts"
+      },
+      {
+        "src": "/images/projects/trade-house-media/THMSmall-2.jpg",
+        "alt": "Trade House Media mobile website design"
+      },
+      {
+        "src": "/images/projects/trade-house-media/THMSmall-3.jpg",
+        "alt": "Trade House Media small icon designs"
+      },
+      {
+        "src": "/images/projects/trade-house-media/THMSmall-4.jpg",
+        "alt": "Trade House Media visual concept"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "meta": {
+      "category": "Brand & Digital",
+      "description": "Brand concept for Greystone, a recruitment company.",
+      "slug": "greystone",
+      "colors": {
+        "primary": "#1e322f",
+        "secondary": "#0f594e"
+      }
+    },
+    "hero": {
+      "title": "Greystone",
+      "subTitle": "Brand & Digital",
+      "image": {
+        "src": "/images/projects/greystone/GreystoneHeader.jpg",
+        "alt": "Greystone logo concept"
+      }
+    },
+    "intro": {
+      "description": "<p>Greystone are a recruitment company specialising in recruiting for the engineering sector. They pride themselves on their more personal approach to recruitment and wanted a brand that differentiated them from their competitors and more clearly showed their USP of teckling recruitment in a totally personal way.</p><p>I created a concept based off of their unique 'club' approach, where they only service the top 10% in their industry. This led me to the idea of creating a key out of the G, symbolic of the doors that working with Greystone can open for a member of their exclusive club.</p>",
+      "list": [
+        "Logo concept",
+        "Responsive website concept",
+        "Social post concepts",
+        "Presentation concept",
+        "Visual system"
+      ]
+    },
+    "images": [
+      {
+        "src": "/images/projects/greystone/GreystoneLarge-1.jpg",
+        "alt": "Greystone desktop website design"
+      },
+      {
+        "src": "/images/projects/greystone/GreystoneSmall-1.jpg",
+        "alt": "Greystone logo concept"
+      },
+      {
+        "src": "/images/projects/greystone/GreystoneLarge-2.jpg",
+        "alt": "Greystone brochure concept"
+      },
+      {
+        "src": "/images/projects/greystone/GreystoneLarge-3.jpg",
+        "alt": "Greystone social post concepts"
+      },
+      {
+        "src": "/images/projects/greystone/GreystoneSmall-2.jpg",
+        "alt": "Greystone print advert concept"
+      },
+      {
+        "src": "/images/projects/greystone/GreystoneSmall-3.jpg",
+        "alt": "Greystone brand pattern"
+      },
+      {
+        "src": "/images/projects/greystone/GreystoneSmall-4.jpg",
+        "alt": "Greystone mobile website design"
       }
     ]
   }

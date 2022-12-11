@@ -4,8 +4,8 @@ export const carouselItemResolver = (data: ProjectInterface) => {
   return {
     slug: data.meta.slug,
     image: {
-      src: data.hero.image && data.hero.image.src,
-      alt: data.hero.image && data.hero.image.alt,
+      src: data.images[1].src,
+      alt: data.images[1].alt,
     },
     title: data.hero.title,
     category: data.meta.category,

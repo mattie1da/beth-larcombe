@@ -113,8 +113,8 @@ const Home: NextPage<homepageInterface> = ({ homepageData }) => {
                 <TiledProject
                   images={featuredProject.images.map((image) => image)}
                   button={{
-                    text: "Check It Out",
-                    href: `/projects/${featuredProject.slug}`,
+                    text: "Download Portfolio",
+                    href: `/files/portfolio.pdf`,
                   }}
                 />
               </section>

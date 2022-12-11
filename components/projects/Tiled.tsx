@@ -25,7 +25,7 @@ export const TiledProject = ({ button, images }: TiledProjectInterface) => {
       <div className={classnames(styles.image, styles.large)}>
         <Media media={images[1]} />
         <Link href={button.href}>
-          <a className={classnames(styles.button, utilStyles.button)}>
+          <a target="_blank" className={classnames(styles.button, utilStyles.button)}>
             {button.text}
           </a>
         </Link>

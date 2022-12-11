@@ -10,6 +10,7 @@ interface ProjectGalleryInterface {
 
 export const ProjectGallery = (props: ProjectGalleryInterface) => {
   const { images } = props;
+  console.log(images);
 
   return (
     <>
@@ -31,7 +32,7 @@ export const ProjectGallery = (props: ProjectGalleryInterface) => {
         ))}
       </div>
       <div className={classnames(styles.grid, styles.gridThree)}>
-        {images.slice(3, -1).map((image: ImageInterface, index: number) => (
+        {images.slice(4, 7).map((image: ImageInterface, index: number) => (
           <div key={index}>
             <Media media={image} />
           </div>

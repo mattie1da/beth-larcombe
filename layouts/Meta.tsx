@@ -9,7 +9,7 @@ interface metaInterface {
 export const Meta = ({
   // default meta attributes
   title = "Beth Larcombe - Graphic Designer",
-  description = "A multi-disciplined designer based in Southampton with over 7 years experience on a variety of brand, print & digital projects.",
+  description = "A multi-disciplined designer based in Southampton with over 8 years experience on a variety of brand, print & digital projects.",
   image = "/sharing-image.png",
 }: metaInterface) => {
   return (

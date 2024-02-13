@@ -107,7 +107,7 @@ const Home: NextPage<homepageInterface> = ({ homepageData }) => {
                 <Hero
                   title="Beth Larcombe"
                   subTitle="Graphic Designer"
-                  body="A multi-disciplined designer based in Southampton with over 7 years
+                  body="A multi-disciplined designer based in Southampton with over 8 years
                     experience on a variety of brand, print &amp; digital projects."
                 />
                 <TiledProject
@@ -162,14 +162,14 @@ const Home: NextPage<homepageInterface> = ({ homepageData }) => {
                 Time flies
               </h2>
               <h3 className={utilStyles.heading3}>
-                Over 7 years of design adventures
+                Over 8 years of design adventures
               </h3>
             </div>
             <div>
               <p>
                 With experience in brand agencies, digital studios and in-house,
-                I’ve spent the last few years honing my craft. My absolutely
-                favourite projects to work on are brand creation, refreshes and
+                I’ve spent the last few years honing my craft. My absolute
+                favourite projects to work on are brand identity, refreshes and
                 digital, but I have a whole heap of print experience to boot
                 too. Basically, whatever you need, I’ve got you covered.
               </p>

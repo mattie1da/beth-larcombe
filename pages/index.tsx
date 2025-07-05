@@ -107,7 +107,7 @@ const Home: NextPage<homepageInterface> = ({ homepageData }) => {
                 <Hero
                   title="Beth Larcombe"
                   subTitle="Graphic Designer"
-                  body="A multi-disciplined designer based in Southampton with over 8 years
+                  body="A multi-disciplined designer based in Somerset with over 10 years
                     experience on a variety of brand, print &amp; digital projects."
                 />
                 <TiledProject

@@ -67,12 +67,12 @@ $offset: 5rem;
   width: max-content;
 
   @include phone() {
-    right: 2rem;
-    top: calc(($offset * -1) + 0.4rem);
+    left: var(--gutter);
+    top: -46px;
   }
 
   @include desktop() {
-    right: calc(100% + 2rem);
-    bottom: 3px;
+    left: 0;
+    bottom: -60px;
   }
 }

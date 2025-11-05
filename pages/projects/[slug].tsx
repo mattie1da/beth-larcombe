@@ -52,7 +52,7 @@ const ProjectPage = ({ project, breadcrumbs }: ProjectPageInterface) => {
 
   return (
     <>
-      <Meta title={`Beth Larcombe - ${hero.title}`} />
+      <Meta title={`Beth Dymond - ${hero.title}`} />
       {/* @ts-ignore */}
       <Navigation />
       <main className={styles.main}>

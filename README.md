@@ -1,4 +1,4 @@
-# Beth Larcombe's Portfolio 🐝
+# Beth Dymond's Portfolio 🐝
 
 Welcome! My name is Matthew Wyatt ([mattie.world](https://mattie.world)), I built this project for Beth using [Next.js](https://nextjs.org/).
 

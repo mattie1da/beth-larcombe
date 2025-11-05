@@ -105,7 +105,7 @@ const Home: NextPage<homepageInterface> = ({ homepageData }) => {
               </div>
               <section className={classnames(utilStyles.grid, styles.hero)}>
                 <Hero
-                  title="Beth Larcombe"
+                  title="Beth Dymond"
                   subTitle="Graphic Designer"
                   body="A multi-disciplined designer based in Somerset with over 10 years
                     experience on a variety of brand, print &amp; digital projects."

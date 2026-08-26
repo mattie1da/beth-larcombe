@@ -162,7 +162,7 @@ const Home: NextPage<homepageInterface> = ({ homepageData }) => {
                 Time flies
               </h2>
               <h3 className={utilStyles.heading3}>
-                Over 8 years of design adventures
+                Over 10 years of design adventures
               </h3>
             </div>
             <div>

@@ -52,10 +52,10 @@ export const Navigation = ({ activeSection }) => {
               [styles.scrolling]: scrollPosition > 100,
             })}
           >
-            <Link href="/">
-              <a className={styles.icon} aria-label="Go to homepage">
-                <IconBee />
-              </a>
+            <Link href="/" className={styles.icon} aria-label="Go to homepage">
+
+              <IconBee />
+
             </Link>
             <button className={styles.button} onClick={toggleMenu}>
               <span className={utilStyles.visuallyHidden}>
@@ -66,42 +66,42 @@ export const Navigation = ({ activeSection }) => {
             {(menuOpen || !isMobile) && (
               <ul className={styles.list}>
                 <li>
-                  <Link href={NAVIGATION_CONSTANTS.projects.href}>
-                    <a
-                      onClick={() => setMenuOpen(false)}
-                      className={classnames(styles.link, {
-                        [styles.active]:
-                          NAVIGATION_CONSTANTS.projects.name === activeSection,
-                      })}
-                    >
-                      {NAVIGATION_CONSTANTS.projects.name}
-                    </a>
+                  <Link
+                    href={NAVIGATION_CONSTANTS.projects.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={classnames(styles.link, {
+                      [styles.active]:
+                        NAVIGATION_CONSTANTS.projects.name === activeSection,
+                    })}>
+
+                    {NAVIGATION_CONSTANTS.projects.name}
+
                   </Link>
                 </li>
                 <li>
-                  <Link href={NAVIGATION_CONSTANTS.about.href}>
-                    <a
-                      onClick={() => setMenuOpen(false)}
-                      className={classnames(styles.link, {
-                        [styles.active]:
-                          NAVIGATION_CONSTANTS.about.name === activeSection,
-                      })}
-                    >
-                      {NAVIGATION_CONSTANTS.about.name}
-                    </a>
+                  <Link
+                    href={NAVIGATION_CONSTANTS.about.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={classnames(styles.link, {
+                      [styles.active]:
+                        NAVIGATION_CONSTANTS.about.name === activeSection,
+                    })}>
+
+                    {NAVIGATION_CONSTANTS.about.name}
+
                   </Link>
                 </li>
                 <li>
-                  <Link href={NAVIGATION_CONSTANTS.contact.href}>
-                    <a
-                      onClick={() => setMenuOpen(false)}
-                      className={classnames(styles.link, {
-                        [styles.active]:
-                          NAVIGATION_CONSTANTS.contact.name === activeSection,
-                      })}
-                    >
-                      {NAVIGATION_CONSTANTS.contact.name}
-                    </a>
+                  <Link
+                    href={NAVIGATION_CONSTANTS.contact.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={classnames(styles.link, {
+                      [styles.active]:
+                        NAVIGATION_CONSTANTS.contact.name === activeSection,
+                    })}>
+
+                    {NAVIGATION_CONSTANTS.contact.name}
+
                   </Link>
                 </li>
               </ul>

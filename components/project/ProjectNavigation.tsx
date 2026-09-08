@@ -16,11 +16,17 @@ export const ProjectNavigation = ({
   return (
     <Container>
       <div className={styles.buttons}>
-        <Link href={previous.href} title={`Navigate to ${previous.text}`}>
-          <a className={utilStyles.button}>View Previous</a>
+        <Link
+          href={previous.href}
+          title={`Navigate to ${previous.text}`}
+          className={utilStyles.button}>
+          View Previous
         </Link>
-        <Link href={next.href} title={`Navigate to ${previous.text}`}>
-          <a className={utilStyles.button}>View Next</a>
+        <Link
+          href={next.href}
+          title={`Navigate to ${previous.text}`}
+          className={utilStyles.button}>
+          View Next
         </Link>
       </div>
     </Container>

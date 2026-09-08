@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { isVideo } from "../../helpers/isVideo";
 import styles from "../../styles/components/projects/Tiled.module.scss";
@@ -21,10 +21,13 @@ export const TiledProject = ({ button, images }: TiledProjectInterface) => {
       </div>
       <div className={classnames(styles.image, styles.square)}>
         <Media media={images[0]} />
-        <Link href={button.href}>
-          <a target="_blank" className={classnames(styles.button, utilStyles.button)}>
-            {button.text}
-          </a>
+        <Link
+          href={button.href}
+          target="_blank"
+          className={classnames(styles.button, utilStyles.button)}>
+
+          {button.text}
+
         </Link>
       </div>
       <div className={classnames(styles.image, styles.large)}>

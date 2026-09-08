@@ -11,8 +11,8 @@ const Success: NextPage = () => {
         <div className={styles.content}>
           <h1 className={utilStyles.heading1}>Thank you!</h1>
           <h2 className={utilStyles.heading2}>I&apos;ll be in touch - Beth</h2>
-          <Link href="/">
-            <a className={utilStyles.button}>&larr; Back to home</a>
+          <Link href="/" className={utilStyles.button}>
+            &larr; Back to home
           </Link>
         </div>
       </div>

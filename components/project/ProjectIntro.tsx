@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Container } from "../../layouts";
 import { ProjectIntroInterface } from "../../types";
 import styles from "../../styles/components/project/ProjectIntro.module.scss";

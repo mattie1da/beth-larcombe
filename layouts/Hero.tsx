@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import utilStyles from "../styles/utils.module.scss";
 import styles from "../styles/layouts/Hero.module.scss";
 import { HeroInterface } from "../types";

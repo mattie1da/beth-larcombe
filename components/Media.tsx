@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { isVideo } from "../helpers/isVideo";
 import styles from "../styles/components/Media.module.scss";
 import { ImageInterface } from "../types";

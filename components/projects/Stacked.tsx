@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import styles from "../../styles/components/projects/Stacked.module.scss";
 import utilStyles from "../../styles/utils.module.scss";
@@ -29,15 +29,15 @@ export const StackedProject = ({
         </div>
       )}
       <div className={styles.image}>
-        <Link href={button.href}>
-          <a className={styles.imageInner}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              layout="fill"
-              objectFit="cover"
-            />
-          </a>
+        <Link href={button.href} className={styles.imageInner}>
+
+          <Image
+            src={image.src}
+            alt={image.alt}
+            layout="fill"
+            objectFit="cover"
+          />
+
         </Link>
       </div>
       <figcaption className={styles.caption}>
@@ -47,11 +47,11 @@ export const StackedProject = ({
             <Link href={button.href}>{title}</Link>
           </h3>
         </div>
-        <Link href={button.href}>
-          <a className={styles.button}>
-            <span className={utilStyles.visuallyHidden}>{button.text}</span>
-            <IconEye />
-          </a>
+        <Link href={button.href} className={styles.button}>
+
+          <span className={utilStyles.visuallyHidden}>{button.text}</span>
+          <IconEye />
+
         </Link>
       </figcaption>
     </figure>

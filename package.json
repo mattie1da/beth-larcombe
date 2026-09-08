@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf .next .netlify/images .netlify/functions-internal && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -20,7 +20,6 @@
     "sass": "^1.54.3"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^5.15.13",
     "@types/node": "^24.0.0",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",

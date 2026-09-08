@@ -3,6 +3,23 @@ import utilStyles from "../styles/utils.module.scss";
 import classnames from "classnames";
 
 export const Form = () => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+
+    try {
+      await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+      });
+      window.location.href = "/success";
+    } catch (error) {
+      console.error("Form submission failed", error);
+    }
+  };
+
   return (
     <form
       method="POST"
@@ -10,7 +27,8 @@ export const Form = () => {
       className={styles.form}
       data-netlify="true"
       netlify-honeypot="bot-field"
-      action="/success"
+      action="/__forms.html"
+      onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
       <label htmlFor="name" className={utilStyles.visuallyHidden}>
